@@ -1,0 +1,80 @@
+<div class="wrapper">
+
+  <input type="checkbox" id="btn" hidden>
+
+  <label for="btn" class="menu-btn">
+
+    <i class="fas fa-bars"></i>
+
+    <i class="fas fa-times"></i>
+
+  </label>
+
+  <nav id="sidebar">
+
+    <ul class="list-items">
+      <mat-nav-list class="matitem">
+
+        <mat-accordion *ngFor="let sidenav of sidenavbarDataNew">
+
+          <mat-expansion-panel *ngIf="sidenav.nodes.length>=1" class="disable_ripple" [expanded]="true" (opened)="panelOpenState = true"
+            hideToggle (closed)="panelOpenState = false">
+
+            <mat-expansion-panel-header class="disable_ripple">
+
+              <mat-panel-title class="mainpanel">
+
+                <img *ngIf="!panelOpenState" src="../../assets/image/arrow-down.png">
+                <img *ngIf="panelOpenState" src="../../assets/image/down.png">
+                <p class="inside_header"> {{sidenav.labelName}}</p>
+              </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+
+            <p class="listItems" *ngFor="let data of sidenav.nodes" (click)="onSelectSidenav(data)">
+              {{data.labelName}}
+            </p>
+            <mat-panel-description>
+            </mat-panel-description>
+
+          </mat-expansion-panel>
+
+          <a mat-list-item routerLinkActive="active" class="menulist" style="margin-left:19px"  (click)="onSelectSidenav(sidenav)"
+            *ngIf="sidenav.nodes.length==0">{{sidenav.labelName}}</a>
+          <!-- <a mat-list-item routerLink="/entity-screen" routerLinkActive="active">Entity</a>
+   <a mat-list-item>Claim Data</a>
+    <mat-divider class="sidenavDivider"></mat-divider> -->
+
+        </mat-accordion>
+        <!-- <mat-accordion>
+          <mat-expansion-panel *ngFor="let sidenav of sidenavbarData">
+            <mat-expansion-panel-header>
+              {{ sidenav.labelName }}
+            </mat-expansion-panel-header>
+            <mat-expansion-panel *ngFor="let node of sidenavbarData.nodes">
+              <mat-expansion-panel-header>
+                {{ node.labelName }}
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+          </mat-expansion-panel>
+        </mat-accordion> -->
+
+        <!-- <mat-accordion>
+          <mat-expansion-panel *ngFor=" let sidenav of sidenavbarData">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ sidenav.labelName }}
+              </mat-panel-title>
+              <p>{{ sidenav.nodes.labelName }}</p>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </mat-accordion> -->
+      </mat-nav-list>
+
+    </ul>
+
+
+  </nav>
+
+</div>

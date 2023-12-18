@@ -1,0 +1,63 @@
+<div class="roles-View">
+    <div class="row">
+        <div class="col-2" style="padding-left: 6%;">
+            <app-sidenav-bar></app-sidenav-bar>
+            <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+    
+        </div>
+    </div>
+    <div class="entityL">
+    <hr>
+    <div class="container-fluid">
+        <div class="row gridRow">
+            <div class="col-12">
+                <br>
+    
+                <div style="margin-top: -15px;padding: 4px;">
+                    <div class="row  gridStyle">
+                        <div class="col-1 colStyle ">
+                            <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
+                        </div>
+                        <div class="col-1 colStylee">
+                            <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Downlaod Excel">
+                            <!-- <button (click)="onBtnExport()">Download CSV export file</button> -->
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-5 colStyle">
+                            <label class="entityLabel">Roles</label>
+                        </div>
+                                 <div class="col-1 colStyle">
+                            <div class="searchBox d-flex searchBarstyle">
+                                <mat-icon class="searchIcon">search</mat-icon>
+                                <input class="searchInput searchbarInput" type="text" name=""
+                                    (keyup)="onFilterTextBoxChanged(gridOptions,$event)" placeholder="Search ">
+                            </div>
+                        </div>
+    
+                           </div>
+                    <br>
+                    <div class="row newclass">
+                            <div class="col-12">
+                            <ag-grid-angular class="gridUnit" style="width: auto !important; height: 486px; position: relative; right: 12px;text-align: center;"
+                                class="ag-theme-alpine" [rowData]="rolesData"
+                                (gridReady)="onGridReady($event)"
+                                [defaultColDef]="defaultColDef"
+                                [suppressExcelExport]="true"
+                                [gridOptions]="gridOptions"
+                                [columnDefs]="columnDefs" [pagination]="true"
+                                [paginationAutoPageSize]="false" [paginationPageSize]="pageSize">
+                            </ag-grid-angular>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-12 footer" >
+          <app-nrlm-footer></app-nrlm-footer>
+        </div>
+      </div>
+</div>

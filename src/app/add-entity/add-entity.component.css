@@ -1,0 +1,461 @@
+.app-dashboarscreen {
+    position: relative;
+    bottom: 71px;
+}
+
+.containerStyle {
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    /* height: 575px; */
+    margin-left: 16px;
+    width: 98%;
+    position: sticky;
+}
+
+.entityLabel {
+    background: #E1F6E8;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.unitInput {
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    box-sizing: border-box;
+    position: absolute;
+    width: 24%px;
+    height: 50px;
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.pinCodeInput {
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color:black;
+    box-sizing: border-box;
+    position: absolute;
+    width: 439px;
+    height: 36px;
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.unitnameInput {
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    box-sizing: border-box;
+    position: absolute;
+    width: 791px;
+    height: 36px;
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.ifscInput {
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    box-sizing: border-box;
+    position: absolute;
+    width: 40%;
+    height: 36px;
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.entityDetail {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 69px;
+    color: #EC8737;
+    text-decoration-line: underline;
+}
+
+.horLine {
+    color: #EC8737;
+}
+
+::ng-deep.addEntitytab .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+    color: black;
+    position: relative;
+    /* right: 650px; */
+}
+
+::ng-deep.addEntitytab .mat-mdc-tab-body-wrapper {
+    height: 468px;
+
+}
+
+:host ::ng-deep.addEntitytab .mat-mdc-tab-body-content {
+    height: 100%;
+    overflow: hidden;
+    width: 97%;
+    position: relative;
+    left: 19px;
+}
+
+::ng-deep.addEntitytab .mat-mdc-tab-labels {
+    display: flex;
+    flex: 1 0 auto;
+    width: 12%;
+}
+
+.unitcodeLabel {
+    line-height: 42px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #464A53;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.stateLabel {
+    line-height: 85px;
+}
+
+::ng-deep.levelDropdown .ng-select.ng-select-single .ng-select-container {
+    /* height: 30px; */
+    line-height: 1.5; 
+}
+
+.modal-header {
+    background: #E1F6E8 !important;
+}
+
+.btn {
+    width: 125px !important
+}
+  
+
+:host ::ng-deep.ng-select .ng-select-container {
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-height: 30px;
+    align-items: center;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    color: #C9C9C9;
+    }
+
+.rowState {
+    margin-top: 34px;
+}
+.section{
+    margin-top: 20px;
+}
+
+.sLabel {
+    line-height: 35px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #464A53;
+    margin-bottom: 5px;
+}
+
+.emailsInput {
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    box-sizing: border-box;
+    position: absolute;
+    width: 902px;
+    height: 36px;
+    border: 1px solid #B2B3B4;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+
+.backButton {
+    width: 125px;
+    background: #00A2FF;
+    border-radius: 5px;
+}
+
+.back-btn{
+    width: 125px;
+    background: #00A2FF;
+    border-radius: 5px;
+}
+
+.delete-btn{
+    background: red;
+    border-radius: 5px;
+    width: 125px;
+}
+
+.reset-btn{
+    background: #00A2FF;
+    border-radius: 5px;
+    width: 125px;
+}
+
+.save-btn{
+    width: 125px;
+    background: #7BB31A;
+    border-radius: 5px;
+}
+ 
+.hide-Delete{
+   margin-left: 12%; 
+}
+.SaveButton {
+    width: 125px;
+    background: #7BB31A;
+    border-radius: 5px;
+}
+.entity-checker{
+    margin-left: -5%;
+}
+
+.rejected-Maker{
+    margin-left: 8%;
+}
+.btn-Width{
+    width: 150px !important;
+}
+.back-margin{
+    margin-left: 16%;
+}
+.resetButton {
+    width: 125px;
+    background: #00A2FF;
+    border-radius: 5px;
+    margin-left: 50%;
+}
+.deleteButton {
+
+    width: 125px;
+    background: red;
+    border-radius: 5px;
+}
+::placeholder {
+    color:#C9C9C9;
+    opacity: 1; /* Firefox */
+  }
+
+:host ::ng-deep.levelDropdown .ng-dropdown-panel.ng-select-bottom {
+    width: 99%;
+    position: absolute;
+    left: 2px;
+    line-height: 1.5; 
+}
+::after.ng-select .ng-has-value.ng-placeholder {
+    display: none;
+    }
+
+    body {
+        padding: 20px;
+      }
+      ::ng-deep.select {
+        word-wrap: normal;
+        height: 30px;
+        width: 25%;
+        /* position: absolute; */
+        left: 940px;
+    }
+
+   :host ::ng-deep.ng-value-container .ng-value {
+        white-space: normal;
+    }
+    .errMSggg {
+        color: red;
+        position: absolute;
+        /* top: 49px; */
+        margin-top: 46px;
+        width: 161px;
+      }
+      .errMSgggs {
+        color: red;
+        position: absolute;
+        /* top: 49px; */
+        margin-top: 46px;
+        width: 190px;
+      }
+      .errMSgggss {
+        color: red;
+        position: absolute;
+        /* top: 49px; */
+        margin-top: 46px;
+        width: 375px;
+      }
+      .errParentU{
+        color: red;
+        position: absolute;
+      
+      }
+  .rowDivsection{
+      margin-top: 6px;
+}
+:host ::ng-deep.ng-select{
+    display: flex;
+}
+.errState{
+    color: red;
+    position: absolute;
+}
+.errorEntity{
+    color: red;
+    font-size: 20px;
+}
+
+.checker-backButton{
+     width: 125px;
+    /* height: 50px; */
+    background: #00A2FF;
+    border-radius: 5px;
+}
+
+.checker-authButton{
+    width: 125px;
+    /* height: 50px; */
+    background: #00A2FF;
+    border-radius: 5px;
+}
+
+.checker-rejectButton{
+    width: 125px;
+    /* height: 50px; */
+    background: red;
+    border-radius: 5px;
+}
+
+.checker-back-margin{
+    margin-left: 12%;
+}
+@supports (-moz-appearance:none) {
+    .ifscInput {
+       width: 577px;
+    }
+    .pinCodeInput{
+        width:31%
+    }
+    .unitnameInput{
+        width: 825px;
+    }
+    .emailsInput{
+        width: 935px;
+        height: 36px;
+    }
+    .backButton{
+        left: 877px;
+    }
+.rowFirefox{
+    position: relative;
+    bottom: 22px;
+}  
+.unitInput{
+    width: 30%;
+    height: 30px;
+}
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {-chrome-:only
+.ifscInput {
+    width: 40%;
+ }
+ .pinCodeInput{
+    width: 31%;
+ }
+ .unitnameInput{
+    width: 58%;
+    height: 36px;
+ }
+ .emailsInput{
+    width:  66%;
+    height: 36px;
+ }
+ .unitInput{
+    width: 24%;
+    height: 36px;
+}
+}
+
+.addEnS{
+    margin-top: -20px;
+}
+
+input:disabled {
+    font-weight: 700 !important;
+    background-color: #EFEFEF4D;
+    color: #C9C9C9;
+}
+:host ::ng-deep .ng-select.ng-select-disabled>.ng-select-container {
+    font-weight: 700 !important;
+    color: #C9C9C9;
+    background-color: #EFEFEF4D;
+}
+
+.editData1{
+    position: relative;
+    left: 13.5%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,161 @@
+<div class="nrlmDataScreen">
+<div class="row">
+    <div class="col-2" style="padding-left: 6%;">
+        <app-sidenav-bar></app-sidenav-bar>
+        <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+    </div>
+</div>
+<div class="nrlmSc">
+<hr>
+<div class="container-fluid">
+    <div class="row gridRow ">
+        <div class="row ms-3 mt-2 align-items-center justify-content-evenly gridStyle" style="background-color: rgba(43, 190, 95, 0.1);">
+            <!-- Select Bank -->
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 d-flex justify-content-evenly">
+                <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4">
+                    <label class="unitLabelsE">Bank</label>
+                </div>
+                <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 bankDrp">
+                    <ng-select [clearable]="false"  [(ngModel)]="bankCode"  class="levelDropdownNrlmm" id="Bank" name="unitName" [items]=unitsData
+                               placeholder="Select Bank" bindLabel="bank" bindValue="unit" (change)="getbankCode($event)" 
+                               required>
+                    </ng-select>
+                </div>
+            </div>
+        
+            <!-- FY Start -->
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 d-flex justify-content-evenly fyColNrlm">
+                <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-5">
+                    <label class="unitLabels">FY Start</label>
+                </div>
+                <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7 fystDropdown">
+                    <ng-select [clearable]="false" [(ngModel)]="selectedStartYear" (ngModelChange)="updateEndYears()" id="startYear" class="fyDropdown">
+                        <ng-option *ngFor="let year of startYears" [value]="year">{{ year }}</ng-option>
+                      </ng-select>                      
+                </div>
+            </div>
+        
+            <!-- FY End -->
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 d-flex justify-content-evenly fendNrlm">
+                <div class="col-xxl-6 col-xl-7 col-lg-6 col-md-4">
+                    <label class="unitLabelss">FY End </label>
+                </div>
+                <div class="col-xxl-6 col-xl-5 col-lg-6 col-md-4 fystDropdown">
+                    <ng-select [clearable]="false" placeholder="select year" [(ngModel)]="selectedEndYear" (ngModelChange)="EndYears()"  id="endYear" class="fyDropdown">
+                        <ng-option *ngFor="let year of endYears" [value]="year">{{ year }}</ng-option>
+                    </ng-select>
+                </div>
+            </div>
+        
+            <!-- Submit Button -->
+             <div class=" col-xxl-2 col-xl-2 col-lg-1 col-md-3 col-sm-6 text-center">
+                <button class="btn btn-success btn-sm btnNRLM" (click)="getsghCodesbyYear()">Submit</button>
+            </div> 
+        </div> 
+        
+        <div class="row ms-3 mt-2 align-items-center justify-content-evenly gridStyle">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 align-items-center d-flex justify-content-evenly">
+                <div class="col-xxl-3 col-xl-3 col-md-3 d-flex justify-content-evenly" style="position: relative; right: 20px;">
+                    <div class="col-xxl-6 col-xl-6 col-md-6">
+                        <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-md-6">
+                        <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative; right: 8px;">
+                    </div>
+                </div>
+                <div class="col-xxl-7 col-xl-8 col-md-8 me-4 selectdrpdwn" style="position: relative; right: 15px;" >
+                    <form [formGroup]="myForms">
+                    <!-- Use different methods -->
+                    <ng-multiselect-dropdown class="promo statuses111" formControlName="name"
+                        [settings]="dropdownSettings" [data]="toppingList" (onSelect)="ColumnSelect($event)"
+                        (onDeSelect)="ColumnDeSelect($event)" (onDeSelectAll)="ColumnDeSelectOrAll($event)"
+                        (onSelectAll)="ColumnSelectOrAll($event)" title="Select Columns">
+                    </ng-multiselect-dropdown>
+                    </form>
+                </div>
+                <!-- <div class="col-xxl-2 col-xl-1 col-md-1" (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+                    <img src="../../assets/image/attach icon.svg">
+                    <div>
+                        <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger"
+                            [cdkConnectedOverlayOpen]="isOpen" (overlayOutsideClick)="isOpen = false">
+                            <div class="overlayDiv">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 overlayCol1">
+                                        <label><b>Left:</b></label>
+                                        <form [formGroup]="myForms">
+                                            <ng-multiselect-dropdown class="pinningdrp" placeholder="Select Field"
+                                                [settings]="dropdownSettings" [data]="toppingListLeft"
+                                                formControlName="name1" [disabled]="disabled"
+                                                (onSelect)="onItemSelect($event, 'left')"
+                                                (onDeSelect)="onItemDeSelect($event, 'left')"
+                                                (onDeSelectAll)="onItemDeSelectOrAll($event, 'left')"
+                                                (onSelectAll)="onItemSelectOrAll($event, 'left')">
+                                            </ng-multiselect-dropdown>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 overlayCol2">
+                                        <label><b>Right:</b></label>
+                                        <form [formGroup]="myForms">
+                                            <ng-multiselect-dropdown class="pinningdrp" placeholder="Select Field"
+                                                formControlName="name2" [settings]="dropdownSettings"
+                                                [data]="toppingListRight" [disabled]="disabled"
+                                                (onSelect)="onItemSelect($event, 'right')"
+                                                (onDeSelect)="onItemDeSelect($event, 'right')"
+                                                (onDeSelectAll)="onItemDeSelectOrAll($event, 'right')"
+                                                (onSelectAll)="onItemSelectOrAll($event, 'right')">
+                                            </ng-multiselect-dropdown>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-xxl-3 col-xl-2 col-lg-3 col-md-2 col-sm-6 text-center">
+                <label class="entityLabel ms-4">NRLM Master Data</label>
+            </div>  
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 me-5 col-sm-3">
+                <div class="searchBox d-flex searchBarstyle">
+                    <mat-icon class="searchIcon">search</mat-icon>
+                    <input class="searchInput searchbarInput" type="text" name=""
+                        (keyup)="onFilterTextBoxChanged(gridOptions,$event)" placeholder="Search">
+                </div>
+            </div>
+            <!-- #59ddf8 -->
+            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-4 d-flex justify-content-evenly">
+              <div>
+                <span (click)="UploadEntity()" [ngClass]="showhided ? 'uploadView':'uploadView1' "> Upload View</span>
+            </div>
+                <div>
+                    <img src="../../assets/image/view.svg" *ngIf="viewPermission && showhided" (click)="viewEnity()" title="Record View" style="left: 8px;position: relative;">
+                    <img *ngIf="fileView && showhided" src="../../assets/image/download.png"  (click)="downloadRecord()" title="Download" style="left: 14px;position: relative;">
+                </div>
+            </div>
+
+            <!-- <div class="col-md-1 d-flex justify-content-around">
+                <img src="../../assets/image/upload.svg"  (click)="UploadEntity()" title="Upload">
+                <img src="../../assets/image/view.svg" (click)="viewEnity()" title="View">
+            </div>
+            <div class="col-md-1 d-flex justify-content-around" *ngIf="showhided">
+                <img src="../../assets/image/Authorize-button.svg" (click)="AuthorizeEntity()"  title="Authorize">
+                <img src="../../assets/image/Delete-button.svg"  (click)="DeleteEntity()" title="Delete">
+                <img src="../../assets/image/download.png"  (click)="onBtnExport()" title="Download">
+        </div> -->
+        </div>
+        <div class="row gridStyleMain">
+            <ag-grid-angular class="ag-theme-alpine gridUnit" [rowData]="sghCodes"
+                (gridReady)="onGridReady($event)" (cellClicked)="onCellClicked($event)"
+                (gridReady)="onGridReady($event)" [defaultColDef]="defaultColDef" [columnDefs]="columnDefs"
+                [pagination]="true" [paginationAutoPageSize]="false" [paginationPageSize]="pageSize">
+            </ag-grid-angular>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-12 footer">
+        <app-nrlm-footer></app-nrlm-footer>
+    </div>
+</div>
+</div>

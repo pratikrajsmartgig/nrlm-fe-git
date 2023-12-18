@@ -1,0 +1,114 @@
+<!-- <div class="row" style="height: 75px;">
+  <div class="col-2" style="padding-top: 1%;
+      padding-left: 6%;">
+          <app-sidenav-bar></app-sidenav-bar>
+          
+            <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+          
+      </div>
+      
+</div> -->
+<div class="row">
+  <div class="col-2" style="padding-left: 6%;">
+      <app-sidenav-bar></app-sidenav-bar>
+      <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+  </div>
+</div>
+<br>
+<div class="horiLine"></div>
+<div class="container-fluid ">
+    <div class="row">
+              <div class="col-4">
+            <img src="../../assets/image/SELLING ITEMS.svg" alt="" class="pieChart" >
+        </div>
+        <div class="col-4">
+            <img src="../../assets/image/SELLING ITEMS.svg" alt="" class="pieChart1" >
+        </div>
+        <div class="col-4">
+            <img src="../../assets/image/SELLING ITEMS.svg" alt="" class="pieChart2" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <img src="../../assets/image/ORDER MONTHLY.svg" alt="" class="graph" >
+        </div>
+    </div>
+    <br>
+    <div class="row" style="background: white;width: 95%;
+    margin-left: 40px;">
+  
+    <div class="row tableSection" >
+                   <div class="col-7">
+            <label>Recent List</label>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-3">
+          <ng-select [(ngModel)]="selectedDays" placeholder="" class="daysDropdown">
+            <ng-option *ngFor="let day of days" [value]="day.id" >{{day.name}} </ng-option>
+                </ng-select>
+        </div>
+       
+    </div>
+    <br><br><br>
+<div class="row" >
+    <div class="col-12">
+        <table class="table ">
+            <thead>
+              <tr style="background-color: white; border-style: solid; box-shadow: 2px;">
+                <th scope="col">#No</th>
+                <th scope="col">Customer</th>
+                <th scope="col" style="width:16%">Delivery Date & Time </th>
+                <th scope="col">Location</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" >1</th>
+                <td> <button type="button" class="btn btn-secondary btn-circle btn-sm">MK</button>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Rs.2000/-</td>
+                <td><button type="button" class="btn btn-secondary">Cancelled</button></td>
+                <td><button type="button" class="btn btn-secondary">Cancelled</button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><button type="button" class="btn btn-secondary btn-circle btn-sm">JC</button>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Rs.2000/-</td>
+                <td><button type="button" class="btn btn-secondary">Delivery</button></td>
+                <td><button type="button" class="btn btn-secondary">Delivery</button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><button type="button" class="btn btn-secondary btn-circle btn-sm">AR</button>Amir</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Rs.2000/-</td>
+                <td><button type="button" class="btn btn-secondary">Hold</button></td>
+                <td><button type="button" class="btn btn-secondary">Hold</button></td>
+              </tr>
+                      </tbody>
+          </table>
+          <br>
+          <div class="pagination">
+            <a class="arrow"><</a>
+            <a >01</a>
+            <a>02</a>
+            <a>03</a>
+            <a>04</a>
+             <a class="arrow">></a>
+  
+</div>
+<br>
+
+
+<div class="row">
+  <div class="col-12 footer" >
+    <app-nrlm-footer></app-nrlm-footer>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<!-- <p>entity-upload works!</p> -->
+<!-- <p>entity-screen works!</p> -->
+<div class="row">
+  <div class="col-2" style="padding-left: 6%;">
+    <app-sidenav-bar></app-sidenav-bar>
+    <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+
+  </div>
+</div>
+<div [ngClass]="EntityData === 'viewEntity' ? 'viewUpEntity' : 'viewUpEntity1'">
+<hr>
+<div class="container-fluid" *ngIf="EntityData === 'viewEntity'" >
+  <div class="row gridRow">
+    <div class="col-12">
+      <br>
+      <div style="padding: 4px; position: relative; top: -19px;">
+        <div class="row  gridStyle">
+          <div class="col-4 colStyles">
+          </div>
+          <div class="col-4 colStyle">
+            <label class="entityLabel">View Bulk Entity Upload</label>
+          </div>
+          <div class="col-2 colStyleIcon">
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-12">
+            <ag-grid-angular class="gridUnit" style=" height: 462px; position: relative; right: 12px;"
+              class="ag-theme-alpine" [rowData]="viewGridData" (gridReady)="onGridReady($event)" (cellClicked)="onCellClicked($event)"
+               (gridReady)="onGridReady($event)" [defaultColDef]="defaultColDef"
+              [columnDefs]="columnDefs" [pagination]="true" [paginationAutoPageSize]="false"  [paginationPageSize]="defaultPage">
+            </ag-grid-angular>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10"></div>
+    <div class="col-2 colStyleIconS">
+      <button (click)="goBack()" class="btn btn-primary SaveButton">Back</button>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" *ngIf="EntityData === 'viewData'">
+  <div class="row gridRow">
+    <div class="col-12">
+      <br>
+      <div style="padding: 4px; position: relative; top: -19px;">
+        <div class="row  gridStyle">
+          <div class="col-4 colStyles">
+          </div>
+          <div class="col-4 colStyle">
+            <label class="entityLabel">View Bulk User Upload</label>
+          </div>
+          <div class="col-2 colStyleIcon">
+
+
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12">
+            <ag-grid-angular class="gridUnit" style=" height: 350px; position: relative; right: 12px;"
+              class="ag-theme-alpine" [rowData]="userviewGridData" (gridReady)="onGridReady($event)"
+              (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)" [defaultColDef]="defaultColDef"
+              [columnDefs]="columnDefss" [pagination]="true" [paginationAutoPageSize]="false"  [paginationPageSize]="defaultPage">
+            </ag-grid-angular>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10"></div>
+    <div class="col-2 colStyleIconS">
+      <button (click)="goBackUserUpload()" class="btn SaveButton">Back</button>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-12 footer">
+    <app-nrlm-footer></app-nrlm-footer>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+<!-- <p>view-accounts-upload works!</p> -->
+<div class="viewClaims">
+    <div class="row">
+        <div class="col-2" style="padding-left: 6%;">
+            <app-sidenav-bar></app-sidenav-bar>
+            <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+        </div>
+    </div>
+    <hr style="margin-top: -0.2rem;">
+    <div class="container-fluid">
+        <br>
+        <div style="padding: 4px;">
+            <div class="row  gridStyle">
+                <div class="col-1 colStyle ">
+                    <!-- <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download Excel"> -->
+                </div>
+                <div class="col-1 colStylee">
+                    <!-- <img (click)="downloadExcel()" src="../../assets/image/excel icon.svg" title="Download PDF"> -->
+                </div>
+                <div class="col-1 colStyles">
+                </div>
+                <div class="col-2 " style="margin-left: 15px;
+            margin-top: 8px;">
+    
+                </div>
+                <div class="col-5 colStyle">
+                    <label class="entityLabel">Claims Upload View</label>
+                </div>
+    <!--
+                <div class="col-1 colStyle">
+                    <div class="searchBox d-flex searchBarstyle">
+                        <mat-icon class="searchIcon">search</mat-icon>
+                        <input class="searchInput searchbarInput" type="text" name=""
+                            (keyup)="onFilterTextBoxChanged(gridOptions,$event)" placeholder="Search ">
+                    </div>
+                </div> -->
+            </div>
+            <br>
+    
+        </div>
+        <div class="gridStyleMain">
+            <div style="height: auto;">
+                <mat-tab-group>
+                    <mat-tab label="Bank Details">
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <ag-grid-angular class="gridUnit" style="height: 369px;"
+                                    class="ag-theme-alpine" [rowData]="arrayLoop" (gridReady)="onGridReady($event)"
+                                    (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)"
+                                    [defaultColDef]="defaultColDef" [columnDefs]="columnDefs" [pagination]="true"
+                                    [paginationAutoPageSize]="false" [paginationPageSize]="pageSize">
+                                </ag-grid-angular>
+                            </div>
+    
+                        </div>
+    
+    
+                    </mat-tab>
+                    <mat-tab label="Customer Details">
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <ag-grid-angular class="gridUnit" style=" height: 369px;"
+                                    class="ag-theme-alpine" [rowData]="arrayLoop" (gridReady)="onGridReady($event)"
+                                    (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)"
+                                    [defaultColDef]="defaultColDef" [columnDefs]="uploadcolumnDefs" [pagination]="true"
+                                    [paginationAutoPageSize]="false" [paginationPageSize]="pageSize">
+                                </ag-grid-angular>
+                            </div>
+    
+                        </div>
+    
+    
+                    </mat-tab>
+                    <mat-tab label="Account Details">
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <ag-grid-angular class="gridUnit" style=" height: 369px;"
+                                    class="ag-theme-alpine" [rowData]="arrayLoop" (gridReady)="onGridReady($event)"
+                                    (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)"
+                                    [defaultColDef]="defaultColDef" [columnDefs]="columnDefss" [pagination]="true"
+                                    [paginationAutoPageSize]="false" [paginationPageSize]="pageSize">
+                                </ag-grid-angular>
+                            </div>
+    
+                        </div>
+                        <br>
+    
+    
+                    </mat-tab>
+                </mat-tab-group>
+    
+    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2">
+                <button (click)="goBack()" type="button" class="btn backButton">Back</button>
+            </div>
+        </div>
+    
+    </div>
+    
+    <div class="row">
+        <div class="col-12 footer">
+            <app-nrlm-footer></app-nrlm-footer>
+        </div>
+    </div>
+</div>

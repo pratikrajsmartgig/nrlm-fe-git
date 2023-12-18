@@ -1,0 +1,70 @@
+/* ::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface {
+    display: none;
+    width: 534px;
+    height: 540px;
+    padding: 7px;
+    position: relative;
+    bottom: 155%;
+    left: -652px;
+    border-color: rgba(236, 135, 55, 1)
+    rgba(43, 189, 95, 1);
+    border: 5px solid ; 
+} */
+
+.NRLMLogo {
+    width: 68px;
+    /* width: 83%; */
+    /* position: relative; */
+    padding-bottom: -5%;
+    /* top: -13%;
+    left: 35px; */
+    /* margin-left:-8px; */
+    margin-top: 6px;
+
+}
+.nabardLogo{
+    padding-left: 75%;
+    /* width: 841%; */
+    width: 152px;
+    /* padding-top: -34%;
+    margin-left: 1022px;
+    position: relative; */
+    /* bottom: 6px; */
+}
+.nabardCol{
+    position: absolute;
+    left: 45rem;
+    top: 8%;
+}
+.logoutCol{
+    position: absolute;
+    top: 17%;
+    left: 880%;
+}
+.arrowLogo{
+    padding-top: 42%;
+    /* width: 66%; */
+    padding-left: 159%;
+    position: relative;
+    /* left: 1220px; */
+    margin-top: 8px;
+    cursor: pointer;
+}
+@supports (-moz-appearance:none) {
+    .logoutCol {
+        position: absolute;
+        top: 91%;
+        left: 1369px;
+}
+
+.nabardCol {
+    position: absolute;
+    left: 1200px;
+    top: 75%;
+}
+.nabardLogo{
+    padding-left: 75%;
+    width: 152px;
+  }
+
+}

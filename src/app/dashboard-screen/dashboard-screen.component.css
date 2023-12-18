@@ -1,0 +1,209 @@
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    background: #FFECDD;
+    /* margin-left: 4%; */
+    height: 1152px;
+}
+
+.pieChart{
+    width: 95%;
+   margin-left: 8%;
+    padding-top: 10%;
+}
+.pieChart1{
+    width: 95%;
+    margin-left: 19%;
+    padding-top: 10%;
+    position: relative;
+    right: 14%;
+}
+
+.pieChart2{
+    width: 95%;
+    margin-left: 19%;
+    padding-top: 10%;
+    position: relative;
+    right: 19%;
+}
+
+.graph{
+    width: 96%;
+    /* position: relative; */
+    top: 3%;
+    left: 3%;
+    margin-left:32px;
+}
+table {
+    border: 1px solid white;
+   /* position: relative; */
+   left: 4%;
+   width: 99%;
+   margin-left:20px;
+  }
+
+.tableSection{
+  padding-top: 12px;
+  padding-left: 42px;
+}
+
+::ng-deep.daysDropdown .ng-dropdown-panel{
+    width:50%;
+}
+
+::ng-deep.daysDropdown .ng-select {
+    width: 38%;
+   margin-left: 9%;
+}
+::ng-deep.daysDropdown.ng-select.ng-select-single .ng-select-container {
+   width: 50%;
+    border: 1px solid #B2B3B4;
+    border-width: 2px;
+    color: red;
+}
+.btn-secondary{
+    pointer-events: none;
+    border-radius: 22px;
+    width: 41%;
+    height: 36px;
+    /* position: relative; */
+    right: 7%;
+    background-color: #767676;
+    font-style: italic;
+    font-size: 12px;
+}
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 11px;
+    text-align: center;
+    /* position: relative; */
+    left: -4px;
+}
+
+/*Pagination css start*/
+*,*:after,*:before{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+.pagination > li{
+    overflow: hidden;
+    position: relative;
+    margin-top: 25px;
+    width: 25%;
+    float: left;
+    list-style: none;
+    padding: 0;
+}
+.pagination > li p{
+    color: #000;
+    line-height: 1;
+}
+.pagination > li > a{
+    line-height: 50px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+/*positon the circle*/
+.pagination > li > a:before{
+    content:'';
+    position: absolute;
+    z-index: -1;
+    width: 50px; height: 50px;
+    left: 50%; margin-left: -25px;
+    border-radius: 100%;
+    border: 1px solid blue;
+    transition: all .2s;
+}
+
+/*positioning the line*/
+.pagination {
+    display: inline-block;
+    margin-left: 40%;
+}
+.center {
+    text-align:center;
+}
+.pagination a {
+    font-weight: light;
+    font-size: 15px;
+    color: black;
+    float: left;
+    margin: 0px 5px;
+    padding: 6px 11px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 26px;
+    background: #FFECDD;
+
+}
+.pagination a.active {
+    background-color: orange;
+    color: white;
+}
+.pagination a:hover:not(.active) {
+    background-color: #d4d5d2;
+}
+.pagination a:hover:not(.active)
+ {
+    background-color: #EC8737;
+    color: white;
+}
+.GFG {
+    font-size:42px;
+    font-weight:bold;
+    color:#009900;
+    text-align:center;
+    margin-bottom:60px;
+}
+.peg {
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+    text-align:center;
+}
+/*Pagination css end */
+.app-dashboarscreen {
+    position: relative;
+    bottom: 71px;
+}
+.horiLine {
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+    position: relative;
+    bottom: 25px;
+}
+/* .backdropBackground {
+    filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 9 !important;
+    width: 1819px;
+    height: 711px;
+    position: relative;
+    bottom: 827px;
+  } */
+  ::ng-deep.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 1;
+    filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+    opacity: -1 !important;
+    width: 1819px;
+    height: 711px;
+    position: relative;
+    bottom: 827px;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

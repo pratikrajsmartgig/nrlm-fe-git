@@ -1,0 +1,150 @@
+ ::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface {
+    display: block;
+    width: 417px;
+    height: 421px;
+    padding: 7px;
+    position: relative;
+    bottom: 155%;
+    left: -553px;
+    overflow: hidden;
+    /* border-color: rgba(236, 135, 55, 1)
+    rgba(43, 189, 95, 1);
+    border: 5px solid ; */
+}
+.loginhead {
+    position: absolute;
+    width: 355px;
+    /* height: 54px; */
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #464A53;
+    margin-left: 17px;
+    margin-top: -100px;
+  }
+  .loginSubhead {
+    position: absolute;
+    width: 240px;
+    height: 54px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* color: #464A53; */
+    margin-left: 62px;
+    margin-top: 23px;
+  }
+.logincontainer {
+    border-style: solid;
+    border-image: linear-gradient(to right, rgba(43, 189, 95, 1),  rgba(43, 189, 95, 1), rgba(43, 189, 95, 1), rgba(236, 135, 55, 1), rgba(236, 135, 55, 1), rgba(236, 135, 55, 1)) 1;
+    border-width: 5px;
+    height: 100%;
+}
+
+.close-icon {
+    left: 96%;
+    position: relative;
+    width: 12px;
+    cursor: pointer;
+}
+
+.nrlmLogoL {
+    width: 111px;
+    height: 98px;
+    position: relative;
+    left: 35%;
+    top: 20px;
+}
+
+.outercontainer {
+    /* border-style: solid;
+    border-color: green; */
+    height: 406px;
+    padding: 2px;
+}
+
+h5 {
+    margin-top: -50px;
+    text-align: center;
+    padding: 45px;
+    font-weight: bold;
+    color: #464A53;
+    font-size: 18px;
+}
+
+:host ::ng-deep.roleDrp .ng-dropdown-panel {
+    width: 90.8%;
+    margin-left: 12px;
+}
+
+.ng-select {
+    width: 64%;
+    margin-left: 18%;
+    margin-top: -22px;
+    line-height: 1.5;
+}
+
+/* ::ng-deep.ng-dropdown-panel.ng-select-bottom {
+    width: 90%;
+} */
+
+:host ::ng-deep.ng-select span {
+    font-weight: bold;
+}
+
+::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: rgba(43, 189, 95, 0.2);
+    ;
+    color: #848689;
+}
+::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    color:  #848689;
+}
+/* ::ng-deep.ng-select .ng-arrow-wrapper .ng-arrow {
+    border-color: orange transparent transparent !important;
+} */
+::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+    border-width: 5px 5px 0 !important;
+}
+
+.btnselectRole {
+    background-color: #EC8737;
+    width: 190px;
+    height: 40px;
+    border-radius: 31px;
+    border: 1px solid #EC8737;
+    color: white;
+    font-weight: bold;
+    /* margin-left: 21px; */
+}
+
+
+:host ::ng-deep.roleDrp .ng-select.ng-select-single .ng-select-container {
+    height: 50px;
+    line-height: 1.5; 
+    /* border: 1px solid #B2B3B4;
+    border-width: 2px; */
+}
+::ng-deep.mat-divider{
+    position: relative;
+    top: 7px;
+    width: 112%;
+    left: -10px;
+    border-color: #B2B3B4;
+    border-width: 0.5px;
+}
+:host ::ng-deep.ng-dropdown-panel .scroll-host  {
+    max-height: 150px;
+}
+.btnR{
+    margin-top: 115px;
+}

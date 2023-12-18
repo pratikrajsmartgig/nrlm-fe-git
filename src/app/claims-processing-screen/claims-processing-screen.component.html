@@ -1,0 +1,306 @@
+<div class="claimScreen">
+<div class="row">
+    <div class="col-2" style="padding-left: 6%;">
+        <app-sidenav-bar></app-sidenav-bar>
+        <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+    </div>
+</div>
+<div class="claimsD">
+<hr>
+<div class="container-fluid">
+    <div class="row gridRow ">
+        <div class="row align-items-center justify-content-evenly gridStyle ms-3 mt-2" style="background-color: rgba(43, 190, 95, 0.1);">
+            <!-- Select Bank -->
+            <div class="col-xxl-2 col-xl-3 col-lg-8 col-md-4 col-sm-6 d-flex justify-content-evenly regionCol">
+                <div class="col-xxl-5 col-xl-6 col-lg-4 col-md-5">
+                    <label class="unitLabelS">Region</label>
+                </div>
+                <div class="col-xxl-7 col-xl-6 col-lg-8 col-md-7 regionDrp">
+                    <ng-select [clearable]="false" [(ngModel)]="recordStatus" class="levelDropdown" id="unitName" name= "unitName"
+                        [items]="unitsData" placeholder="Select Region" bindLabel="unitName" bindValue="unitCode"
+                        required (change)="getRecordStatus($event)">
+                    </ng-select>
+                </div>
+            </div>
+            <div class="col-xxl-2 col-xl-3 col-lg-8 col-md-4 col-sm-6 d-flex justify-content-evenly bankCol">
+                <div class="col-xxl-5 col-xl-6 col-lg-4 col-md-5">
+                    <label class="unitLabelbb">Bank</label>
+                </div>
+                <div class="col-xxl-7 col-xl-6 col-lg-8 col-md-7 bankDrp">
+                    <ng-select [clearable]="false" [(ngModel)]="bankStatus" class="levelDropdownB" id="unitName" name= "unitName"
+                        [items]="banksData" placeholder="Select Bank" bindLabel="unitName" bindValue="unitCode"
+                        required (change)="getBankStatus($event)">
+                    </ng-select>
+                </div>
+            </div>
+            <!-- FY End -->
+            <div class="col-xxl-2 col-xl-3 col-lg-2 col-md-4 col-sm-6 d-flex justify-content-evenly fyendCol">
+                <div class="col-xxl-5 col-xl-3 col-lg-1 col-md-5">
+                    <label class="unitLabels">FY End</label>
+                </div>
+                <!-- <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7">
+                    <select [(ngModel)]="fyendyearpopup" id="startYear" class="form-control yearCol" (change)="onSelectFinancialYearpopup($event)">
+                        <option selected hidden>Select Ending</option>
+                        <option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</option>
+                    </select>                    
+                </div> -->
+                <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7">
+                    <ng-select [clearable]="false" [(ngModel)]="selectedFyEnding" (ngModelChange)="onSelectFinancialYearpopup()" placeholder="select year"  id="startYear" class="fyng qtrng">
+                     
+                        <ng-option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</ng-option>
+                    </ng-select>
+                </div>
+            </div>
+            <!-- FY End -->
+            <div class="col-xxl-2 col-xl-3 col-lg-2 col-md-4 col-sm-6 d-flex justify-content-evenly qtrendCol">
+                <div class="col-xxl-6 col-xl-4 col-lg-6 col-md-4">
+                    <label class="unitLabelss">Qtr End </label>
+                </div>
+                <!-- <div class="col-xxl-6 col-xl-5 col-lg-6 col-md-4">
+                    <ng-select [(ngModel)]="qtrselected" id="startYear" class="form-control"  (change)="qtrEnding($event)">
+                        <option selected hidden>Select quater</option>
+                        <option *ngFor="let year of qtdata" [value]="year">{{ year }}</option>
+                    </ng-select>
+                </div> -->
+                <div class="col-xxl-6 col-xl-6 col-lg-2 col-md-4">
+                    <ng-select [clearable]="false" [(ngModel)]="selectedQtrEnding" (ngModelChange)="qtrEnding($event)" placeholder="select year" id="endYear" class="qtrng">
+                     
+                        <ng-option style="width: 119px;" *ngFor="let year of qtdata"[value]="year">{{ year }}</ng-option>
+                    </ng-select>
+                </div>
+            </div>
+         
+            <!-- Submit Button -->
+             <div class=" col-xxl-2 col-xl-2 col-lg-1 col-md-3 col-sm-6 text-center">
+                <button class="btn btn-success btn-sm btnNRLM" (click)="getsghCodesbyYear()">Submit</button>
+            </div> 
+        </div> 
+        <div class="row ms-3 align-items-center justify-content-evenly gridStyle mt-2">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 align-items-center d-flex justify-content-evenly pdfCol">
+                <div class="col-xxl-3 col-xl-3 col-md-3 d-flex justify-content-evenly" style="position: relative; right: 10px;">
+                    <div class="col-xxl-6 col-xl-6 col-md-6">
+                        <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-md-6">
+                        <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative; right: 8px;">
+                    </div>
+                </div>
+                <div class="col-xxl-7 col-xl-8 col-md-8 me-4 selectdrpdwn" style="position:relative; left: 0px;">
+                    <form [formGroup]="myForms">
+                    <!-- Use different methods -->
+                    <ng-multiselect-dropdown class="promo statuses111 columnDrp" formControlName="name" title="Select Columns"
+                        [settings]="dropdownSettings" [data]="toppingList" (onSelect)="ColumnSelect($event)"
+                        (onDeSelect)="ColumnDeSelect($event)" (onDeSelectAll)="ColumnDeSelectOrAll($event)"
+                        (onSelectAll)="ColumnSelectOrAll($event)">
+                    </ng-multiselect-dropdown>
+                    </form>
+                </div>
+                <!-- <div class="col-xxl-2 col-xl-1 col-md-1" (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+                    <img src="../../assets/image/attach icon.svg" class="img" title="Pinning Columns">
+                    <div>
+                        <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger"
+                            [cdkConnectedOverlayOpen]="isOpen" (overlayOutsideClick)="isOpen = false">
+                            <div class="overlayDiv">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 overlayCol1">
+                                        <label><b>Left:</b></label>
+                                        <form [formGroup]="myForms">
+                                            <ng-multiselect-dropdown class="pinningdrp" placeholder="Select Field"
+                                                [settings]="dropdownSettings" [data]="toppingListLeft"
+                                                formControlName="name1" [disabled]="disabled"
+                                                (onSelect)="onItemSelect($event, 'left')"
+                                                (onDeSelect)="onItemDeSelect($event, 'left')"
+                                                (onDeSelectAll)="onItemDeSelectOrAll($event, 'left')"
+                                                (onSelectAll)="onItemSelectOrAll($event, 'left')">
+                                            </ng-multiselect-dropdown>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 overlayCol2">
+                                        <label><b>Right:</b></label>
+                                        <form [formGroup]="myForms">
+                                            <ng-multiselect-dropdown class="pinningdrp" placeholder="Select Field"
+                                                formControlName="name2" [settings]="dropdownSettings"
+                                                [data]="toppingListRight" [disabled]="disabled"
+                                                (onSelect)="onItemSelect($event, 'right')"
+                                                (onDeSelect)="onItemDeSelect($event, 'right')"
+                                                (onDeSelectAll)="onItemDeSelectOrAll($event, 'right')"
+                                                (onSelectAll)="onItemSelectOrAll($event, 'right')">
+                                            </ng-multiselect-dropdown>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-xxl-3 col-xl-2 col-lg-3 col-md-2 col-sm-6 text-center">
+                <label class="entityLabel ">Claims Processing </label>
+            </div>  
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3  col-sm-3">
+                <div class="searchBox d-flex searchBarstyle">
+                    <mat-icon class="searchIcon">search</mat-icon>
+                    <input class="searchInput searchbarInput" type="text" name=""
+                        (keyup)="onFilterTextBoxChanged(gridOptions,$event)" placeholder="Search">
+                </div>
+            </div>
+            <div style="margin-left: 23px;" class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 d-flex justify-content-evenly">
+                <div (click)="viewEnity()" class="col-2" *ngIf="viewPermission && showhided ">
+                    <img src="../../assets/image/view.svg" class="viewImg" title="View" >
+                    <!-- style="position: absolute;margin-left: 50px;" -->
+                </div>  
+                <div class="col-2" *ngIf="AddPermission">
+                    <img src="../../assets/image/add new icon.svg" title="Add Claims" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalUpload" [ngClass]="viewPermission && showhided ? 'addImgIcon1' : 'addImgIcon'">
+            
+                </div>
+                <div  class="col-2" *ngIf="uploadPermission">
+                    <img src="../../assets/image/upload.svg" (click)="UploadEntity()" title="Upload Claims">
+            
+                </div>
+             
+                <div class="col-2 ms-2" *ngIf="(EditPermission && showhided && (loginUserId === makerId || newMaker === 'null')  && celldata?.status==='U') || (EditPermission && showhided && loginUserId === makerId && (celldata?.status==='R' && celldata?.pending === celldata?.rolePos) )" >
+                    <img src="../../assets/image/edit.svg" (click)="EditEntity()" title="Edit">
+            
+                </div>
+                <div class="col-2" *ngIf="(EditPermission && showhided && loginUserId !== makerId && newMaker!='null'  && celldata?.status==='U') || (EditPermission && showhided && loginUserId !== makerId && (celldata?.status==='R' && celldata?.pending === celldata?.rolePos) )"  >
+                    <img src="../../assets/image/edit.svg"  title="Edit" (click)="EditEntityDialog()" class="editImg2">
+                </div>
+            
+                <div  class="col-2" *ngIf="authorizePermission && showhided  && loginUserId !== makerId && celldata?.status ==='P'" >
+                    <img src="../../assets/image/Authorize-button.svg" (click)="AuthorizeEntity()" title="Authorize">
+            
+                </div>
+                <div  class="col-2" *ngIf="EditPermission && showhided && entityStatus === 'Rejected'">
+                    <img src="../../assets/image/Delete-button.svg" (click)="DeleteEntity()" title="Delete" >
+            
+                </div>
+                <img *ngIf="fileView && showhided" src="../../assets/image/download.png"  (click)="downloadRecord()" title="Download">
+            </div>
+
+           
+        </div>
+        <div class="row gridStyleMain mt-1">
+            <ag-grid-angular class="ag-theme-alpine gridUnit" [rowData]="ClaimsProcessData"
+               (cellClicked)="onCellClicked($event)"
+                (gridReady)="onGridReady($event)" [defaultColDef]="defaultColDef" [columnDefs]="columnDefs"
+                [pagination]="true" [paginationAutoPageSize]="false" [paginationPageSize]="pageSize">
+            </ag-grid-angular>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-12 footer">
+        <app-nrlm-footer></app-nrlm-footer>
+    </div>
+</div>
+</div>
+<!-- Claims Processing Modal Screen-->
+<div class="modal fade modal-xl" id="exampleModalUpload" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" #myModal >
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="container modal-content">
+                <div class="row d-flex">
+                <div class="col-4">
+                   
+                      <img src="../../assets/image/close.png" data-bs-dismiss="modal" aria-label="Close" class="close-icon" (click)="closeModal()">
+                </div>
+            </div>
+            <div class="row m-0 d-flex justify-content-start addModalRow">
+                <!-- select region -->
+                <div  class="col-3 d-flex regionMCol" >
+                    <div class="col-md-4 col-12">
+                        <label class="unitLabelm">Region</label>
+                    </div>
+                    <div class="col-md-8 col-12 regColumn">
+                        <ng-select [clearable]="false" [(ngModel)]="addRecordStatus" class="levelDropdownModal" id="unitName" name= "unitName"
+                            [items]="unitsData1" placeholder="Select Region" bindLabel="unitName" bindValue="unitCode"
+                            required (change)="getAddRecordStatus($event)">
+                        </ng-select>
+                    </div>
+                </div>
+             <!-- select unit -->
+                <div class="col-3 d-flex bankMCol">
+                    <div class="col-md-4 col-12">
+                        <label class="unitLabelbm">Bank</label>
+                    </div>
+                    <div class="col-md-8 col-12 bankColumn">
+                        <ng-select [clearable]="false" [(ngModel)]="addBanksStatus" class="levelDropdownBank" id="unitName" name= "unitName"
+                            [items]="forAddBanksDropdown" placeholder="Select" bindLabel="unitName" bindValue="unitCode"
+                            required (change)="getAddBankStatus($event)">
+                        </ng-select>
+                    </div>
+                </div>
+                <!-- FY End -->
+                <div class="col-4 d-flex ">
+                    <div class="col-md-5 col-12">
+                        <label class="unitLabels" style="left: 25px;bottom: 5px;position: relative;">FY End</label>
+                    </div>
+                    <!-- <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7">
+                        <select [(ngModel)]="fyendyearpopup" id="startYear" class="form-control yearCol" (change)="onSelectFinancialYearpopup($event)">
+                            <option selected hidden>Select Ending</option>
+                            <option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</option>
+                        </select>                    
+                    </div> -->
+                    <div class="col-md-4 col-12 fyendDrpM" >
+                        <ng-select [clearable]="false"  class="fyEndClaims" [(ngModel)]="selectedFyEnding" (ngModelChange)="onSelectFinancialYearpopup()" placeholder="select year"  id="startYear">
+                         
+                            <ng-option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</ng-option>
+                        </ng-select>
+                    </div>
+                </div>
+            
+                <!-- Qtr End -->
+                <div class="col-2 d-flex g-0 qtrendMCol">
+                    <div class="col-md-6 col-12">
+                        <label class="unitLabelssM">Qtr End </label>
+                    </div>
+                    <!-- <div class="col-xxl-6 col-xl-5 col-lg-6 col-md-4">
+                        <ng-select [(ngModel)]="qtrselected" id="startYear" class="form-control"  (change)="qtrEnding($event)">
+                            <option selected hidden>Select quater</option>
+                            <option *ngFor="let year of qtdata" [value]="year">{{ year }}</option>
+                        </ng-select>
+                    </div> -->
+                    <div class="col-md-7 col-12 yearCol qtrEndDrp">
+                        <ng-select [clearable]="false"  [(ngModel)]="selectedQtrEnding" (ngModelChange)="qtrEnding($event)" placeholder="select year" id="endYear" class="qtrng qtrModal">
+                         
+                            <ng-option *ngFor="let year of qtdata"[value]="year">{{ year }}</ng-option>
+                        </ng-select>
+                    </div>
+                </div>
+               </div>
+            <div class="row m-0 d-flex justify-content-center">
+                <div class="col-5"></div>
+                <div class="col-4" style="margin-top: 2.5rem;">
+                    <button [disabled]="!addRecordStatus || !addBanksStatus || !selectedFyEnding || !selectedQtrEnding"
+                    class="btn btn-sm SaveButtonnn" (click)="addEntity()">Submit</button>                           
+                       
+                          </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+   <!-- Not Maker Edit modal -->
+   <div class="modal fade" data-bs-backdrop="static" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center" style="background:#E1F6E8 !important">
+          <h1 class="modal-title text-center flex-grow-1" id="exampleModalLabel">Warning !</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-5">
+          <h4>You are not the maker, Do you still want to edit?</h4>
+        </div>
+        <div class="modal-footer justify-content-around m-3" >
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="EditEntity()">Yes</button>
+          <button type="button" class="btn " data-bs-dismiss="modal" aria-label="Close">No</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <app-warning-log-dialog (claimsEvent)="EditEntity()" ></app-warning-log-dialog>
+  <app-error-dialog></app-error-dialog>

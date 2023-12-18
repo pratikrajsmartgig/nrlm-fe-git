@@ -1,0 +1,10 @@
+::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface {
+    display: block;
+    width: auto;
+    height: auto;
+    /* padding: 24px; */
+    position: relative;
+    bottom: 155%;
+    left: 0%;
+    overflow-x: hidden;
+}

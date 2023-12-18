@@ -1,0 +1,121 @@
+<div class="viewNrlmUpload">
+    <div class="row">
+        <div class="col-2" style="padding-left: 6%;">
+            <app-sidenav-bar></app-sidenav-bar>
+            <app-dashboard-header class="app-dashboarscreen"></app-dashboard-header>
+
+        </div>
+    </div>
+    <div class="viewNrlm">
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-3">
+                    <h2 style="font-weight: 700;" *ngIf="leabelkey!='20215'">View NRLM Upload</h2>
+                    <h2 style="font-weight: 700;" *ngIf="leabelkey=='20215'">View Closed Account Upload</h2>
+
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row gridRow">
+                <div class="row fRow" *ngIf="leabelkey!='20215'">
+                    <div class="col-1">
+                        <label class="unitLabel">FY Ending</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="Qtr_Ending[0].FY_Ending">
+                    </div>
+                    <div class="col-1">
+                        <label class="unitLabel">State Code</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="Qtr_Ending[0].Stat_Code">
+                    </div>
+                    <div class="col-1">
+                        <label class="unitLabel">Bank Code</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="Qtr_Ending[0].Bank_Code">
+                    </div>
+                    <div class="col-1">
+                        <label class="unitLabel">Qtr Ending</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="Qtr_Ending[0].Qtr_Ending">
+                    </div>
+                    <div class="col-1 sRow">
+                        <label class="unitLabel">Bank Name</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBoxx" type="" disabled [(ngModel)]="Qtr_Ending[0].Bank">
+                    </div>
+                </div>
+                <div class="row fRow" *ngIf="leabelkey=='20215'">
+                    <div class="col-1">
+                        <label class="unitLabel">FY Ending</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="Qtr_Ending[0].FY_Ending">
+                    </div>
+
+                    <div class="col-1">
+                        <label class="unitLabel">Bank Code</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="bankCodeUser">
+                    </div>
+                    <div class="col-1">
+                        <label class="unitLabel">Qtr Ending</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBox" type="" disabled [(ngModel)]="Qtr_Ending[0].Qtr_Ending">
+                    </div>
+
+                    <div class="col-1 sRow">
+                        <label class="unitLabel">Bank Name</label>
+                    </div>
+                    <div class="col-1 inpBox">
+                        <input class="viewBoxx" type="" disabled [(ngModel)]="Qtr_Ending[0].Bank">
+                    </div>
+                </div>
+                <div class="gridStyleMain">
+                    <div class="row">
+                        <div class="col-12">
+                            <ag-grid-angular *ngIf="leabelkey=='20211'" class="ag-theme-alpine gridUnit"
+                                [rowData]="selectedLevelData" (gridReady)="onGridReady($event)"
+                                (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)"
+                                [defaultColDef]="defaultColDef" [columnDefs]="columnDefs" [pagination]="true"
+                                [paginationAutoPageSize]="false" [paginationPageSize]="defaultPage">
+                            </ag-grid-angular>
+
+                            <ag-grid-angular *ngIf="leabelkey=='20215'" class="ag-theme-alpine gridUnit"
+                                [rowData]="selectedLevelData" (gridReady)="onGridReady($event)"
+                                (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)"
+                                [defaultColDef]="defaultColDef" [columnDefs]="columnDefs1" [pagination]="true"
+                                [paginationAutoPageSize]="false" [paginationPageSize]="defaultPage">
+                            </ag-grid-angular>
+                            <!-- <ag-grid-angular  *ngIf="leabelkey=='20215' && uploadclosedAccountId == 'ClosedAccountView'"
+                class="ag-theme-alpine gridUnit" [rowData]="selectedLevelData" (gridReady)="onGridReady($event)"
+                (cellClicked)="onCellClicked($event)" (gridReady)="onGridReady($event)"
+                [defaultColDef]="defaultColDef" [columnDefs]="columnDefs1" [pagination]="true"
+                [paginationAutoPageSize]="false">
+            </ag-grid-angular> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" (click)="back()" class="btn backButton">Back</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 footer">
+            <app-nrlm-footer></app-nrlm-footer>
+        </div>
+    </div>
+</div>
