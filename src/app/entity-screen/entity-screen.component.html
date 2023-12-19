@@ -25,10 +25,10 @@
             <div class="row mt-2 align-items-center justify-content-evenly gridStyle" style="background-color: rgba(43, 190, 95, 0.1);" *ngIf="roleCode== 1">
                 <!-- HO -->
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 d-flex justify-content-evenly" style="width: 200px;" >
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4" style="width: 78px; margin-right: 5px; margin-top: 8px;">
-                        <label class="unitLabelss"><strong>Head Office</strong></label>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4" >
+                        <label class="unitLabel"><strong>Head Office</strong></label>
                     </div>
-                    <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 drpBank">
+                    <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 drpBank" style="font-size: 12px;">
                         <ng-select [clearable]="false" [(ngModel)]="bankHOCode" class="startDropdown" id="Bank"
                             name="unitName"  placeholder="Select Bank" (ngModelChange)="getHOStatus($event)" required>
                             <ng-option  [value]="bankHOCode">{{ bankHOCode }}</ng-option>
@@ -41,7 +41,7 @@
                     <div class="col-xxl-5 col-xl-6 col-lg-3 col-md-5" style="width: 100px; margin-right: 10px; margin-top: 8px;">
                         <label class="unitLabel"><strong>Regional Office</strong></label>
                     </div>
-                    <div class="col-xxl-7 col-xl-6 col-lg-3 col-md-3 startyDrp"  style="margin-top: 2px; width: 200px;">
+                    <div class="col-xxl-7 col-xl-6 col-lg-3 col-md-3 startyDrp"  style="margin-top: 2px; width: 180px;font-size: 12px;">
                         <ng-select [clearable]="false"  placeholder="select RO"  [(ngModel)]="bankROCode"
                             (ngModelChange)="getROStatus($event)" id="startYear" class="startDropdown">
                             <ng-option *ngFor="let RO of roData" [value]="RO">{{ RO }}</ng-option>
@@ -52,9 +52,9 @@
                 <!-- Bank -->
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex justify-content-evenly fendNrlm" >
                     <div class="col-xxl-6 col-xl-7 col-lg-3 col-md-4" style="width: 100px; margin-right: -30px;">
-                        <label class="unitLabelF" style="margin-left: 20px; margin-top: 8px;"><strong>Banks</strong></label>
+                        <label class="unitLabelF" style="margin-left: 20px; margin-top: 8px;font-size: 12px;"><strong>Banks</strong></label>
                     </div>
-                    <div class="col-xxl-6 col-xl-5 col-lg-3 col-md-3 startyDrp" style="width: 220px;" > 
+                    <div class="col-xxl-6 col-xl-5 col-lg-3 col-md-3 startyDrp" style="width: 180px; font-size: 12px;" > 
                         <ng-select [clearable]="false" placeholder="select bank" [(ngModel)]="bankCode"
                             (ngModelChange)="getBankStatus($event)" id="endYear" class="startDropdown">
                             <ng-option *ngFor="let bank of bankData" [value]="bank">{{ bank }}</ng-option>
@@ -67,7 +67,7 @@
                     <div class="col-xxl-6 col-xl-7 col-lg-3 col-md-3" style="width: 50px; margin-right: 10px;">
                         <label class="unitLabelF" style="margin-top: 8px; "><strong>Branches</strong> </label>
                     </div>
-                    <div class="col-xxl-6 col-xl-5 col-lg-3 col-md-3 startyDrp"  style="width: 200px;"> 
+                    <div class="col-xxl-6 col-xl-5 col-lg-3 col-md-3 startyDrp"  style="width:180px; font-size: 12px;"> 
                         <ng-select [clearable]="false" placeholder="select branch" [(ngModel)]="branchCode"
                             (ngModelChange)="getBranchStatus($event)" id="endYear" class="startDropdown">
                             <ng-container *ngIf="isBranchReady; else loading">
@@ -113,7 +113,7 @@
             <!--Branches-->
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex justify-content-evenly fendNrlm" >
                 <div class="col-xxl-6 col-xl-7 col-lg-3 col-md-3" style="width: 50px;">
-                    <label class="unitLabelF" style="margin-top: 8px;"><strong>Branches</strong></label>
+                    <label class="unitLabel" style="margin-top: 8px;"><strong>Branches</strong></label>
                 </div>
                 <div class="col-xxl-6 col-xl-5 col-lg-3 col-md-3 startyDrp"  style="width: 250px; margin-left: 20px;"> 
                     <ng-select [clearable]="false" placeholder="select branch" [(ngModel)]="branchCode"
@@ -162,13 +162,13 @@
         
                 </div>
             <!-- New code added till here -->
-            <div style="margin-top: 19px;padding: 4px;"> 
+            <div style="margin-top: 2px;padding: 4px;"> 
                 <div class="row  gridStyle">
                     <div class="col-1 colStyle ">
                         <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
                     </div>
                     <div class="col-1 colStylee">
-                        <img (click)="downloadExcel()" src="../../assets/image/excel icon.svg" title="Download Excel">
+                        <img (click)="downloadExcel()" src="../../assets/image/excel icon.svg" title="Download Excel" style="margin-left: 10px;">
                     </div>
                     <div class="col-3 colStyles">
                         <form [formGroup]="myForms">
@@ -223,7 +223,7 @@
                         <label class="entityLabel">Entity</label>
                     </div>
                 
-                    <div class="col-1 colStyle" [ngClass]="uploadPermission ? 'search1' : 'search2'">
+                    <div class="col-1 colStyleSearch" [ngClass]="uploadPermission ? 'search1' : 'search2'">
                         <div class="searchBox d-flex searchBarstyle">
                             <mat-icon class="searchIcon">search</mat-icon>
                             <input class="searchInput searchbarInput" type="text" name=""
@@ -246,11 +246,11 @@
                                 <!-- <img src="../../assets/image/upload.svg" (click)="UploadEntity()" class="editImg" title="Upload Entity"> -->
                                 <span style="background-color: #000000;color: white;padding: 0.3rem;border-radius: 5px;position: relative;top: 5px;" class="editImg" title="Upload Entity" (click)="UploadEntity()"> Upload View</span>
                             </div>
-                            <div class="col-2" *ngIf="viewPermission && showhided ">
+                            <div class="col-2" *ngIf="viewPermission && showhided " style="margin-left: 5px; margin-right: 5px;">
                                 <img  src="../../assets/image/view.svg" (click)="viewEnity()"class="viewEn" title="View Entity" [ngClass]="uploadPermission ? 'viewEn': 'viewEn1'" >
                         
                             </div>  
-                            <div class="col-2" *ngIf="AddPermission && this.roleCode!==3">
+                            <div class="col-2" *ngIf="AddPermission && this.roleCode!==3" style="margin-right: 5px;">
                                 <img src="../../assets/image/add new icon.svg" title="Add Entity" class="addImgIcon" (click)="addEntity()"  style="position: relative; right: 0px;">
                             </div>
                               <!-- <div class="col-2" *ngIf="EditPermission && showhided && loginUserId !== makerId && StatusName !=='Rejected' && StatusName !=='Authorized'" >
@@ -284,7 +284,7 @@
                 <div class="gridStyleMain">
                 <div class="row">
                     <div class="col-12">
-                        <ag-grid-angular class="gridUnit" style=" height: 455px; position: relative; right: 12px;"
+                        <ag-grid-angular class="gridUnit" style=" font-size: 12px; height: 455px; position: relative; right: 12px;"
                             class="ag-theme-alpine" [rowData]="selectedLevelData" (gridReady)="onGridReady($event)"
                             (cellClicked)="onCellClicked($event)" 
                             [defaultColDef]="defaultColDef" [columnDefs]="columnDefs" [pagination]="true"

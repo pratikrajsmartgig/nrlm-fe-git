@@ -34,7 +34,7 @@
     padding-left: 59%;
     margin-top: 7px;
     color: black;
-    width: 171px;
+    /* width: 171px; */
 }
 .unitLabelss {
     font-family: 'Roboto';
@@ -292,6 +292,7 @@
 }
 .fyClaims{
     width: 132px;
+    margin-top: 5px;
 }
 .fyStartDrpClaims{
     position: relative;

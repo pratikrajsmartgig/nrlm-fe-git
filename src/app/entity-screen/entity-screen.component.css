@@ -18,7 +18,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 12px;
     color: black;
 }
 
@@ -167,11 +167,12 @@
 }
 
 .ag-header-cell-text {
-    font-family: 'Sans Serif Collection';
+    /* font-family: 'Sans Serif Collection'; */
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 30px;
+    font-weight: bolder;
     color: rgba(0, 0, 0, 0.78);
 }
 
@@ -179,11 +180,12 @@
 
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'Sans Serif Collection';
+    /* font-family: 'Sans Serif Collection'; */
     font-style: normal;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 30px;
+    font-weight: bolder;
     color: rgba(0, 0, 0, 0.78) !important;
 }
 
@@ -228,6 +230,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 
@@ -237,9 +240,14 @@
 }
 
 .colStyle {
+
     margin-top: 10px;
     cursor: pointer;
  
+}
+.colStyleSearch{
+    margin-top: 10px;
+    cursor: pointer;
 }
 .colStyleIcon{
     margin-top: 10px;
@@ -271,9 +279,9 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 21px;
-    width: 295px;
+    width: 170px;
     height: 35px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -291,6 +299,7 @@
 .gridUnit {
     width: 1373px;
     height: 350px;
+    font-size: 12px;
 }
 
 .sidenavStyle {
@@ -363,6 +372,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 @supports (-moz-appearance:none) {
@@ -417,6 +427,14 @@
 .entityL{
     margin-top: -20px;
 }
+.unitLabel{
+    font-size: 12px;
+}
+
+.ag-cell {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
 
 ::ng-deep.ag-theme-alpine {
     --ag-grid-size: 3.6px;
@@ -433,6 +451,7 @@
         height: 745px;
     }
  }
+
 
 .search1{
     margin-left: 11%;
