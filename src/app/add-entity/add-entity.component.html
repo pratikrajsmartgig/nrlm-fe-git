@@ -16,7 +16,7 @@
             </div>
         </div>
         <mat-tab-group class="addEntitytab">
-            <mat-tab label="Entity Detail">
+            <mat-tab >
                 <br>
                 <div class="row">
                     <div class="col-3">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <!-- <br> -->
-                <div class="row" style="margin-top: 70px;">
+                <div class="row" style="margin-top: 50px;">
                     <div class="col-4">
                         <label class="sLabel">State *</label>
                         <ng-select [disabled]="dissbleBtn" [clearable]="false" class="levelDropdown" id="stateDrp" name="stateDrp"
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="row">
+                <div class="row" style="margin-top: 10px;">
                     <div class="col-8">
                         <label class="sLabel">Email *</label>
                         <input [disabled]="dissbleBtn" (keyup)="emailEntered($event)" placeholder="Enter Email" id="emailIn" name="emailIn" [(ngModel)]="email" class="emailsInput" pInputText  #emailIn="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$"  />
