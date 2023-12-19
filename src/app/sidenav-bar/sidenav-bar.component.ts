@@ -23,6 +23,7 @@ sidenavbarDataNew:any;
 nodes:any= [];
 sideLabelData:any;
 panelOpenState = false;
+panelOpenStateSideNav = true;
 
 ngOnInit(): void {
   this.UserId = localStorage.getItem("UserID");
@@ -66,10 +67,7 @@ onSelectSidenav(data:any) {
   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
   this.router.navigate(['/entity-screen']);
   }
-  // else if(clickedSidenavData.labelKey == '10114') {
-  //   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-  // this.router.navigate(['/interest-rate-screen']);
-  // }
+
   else if(clickedSidenavData.labelKey == '10011') {
     localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
   this.router.navigate(['/master-data-screen']);
@@ -119,58 +117,5 @@ onSelectSidenav(data:any) {
     this.router.navigate(['/claims-settlement']);
   }
   }
-// onSelectSidenav(data:any) {
-// let clickedSidenavData = data;
 
-// localStorage.setItem('labelKeyOfSideNav',clickedSidenavData.labelKey)
-// if(clickedSidenavData.labelKey == '10111') {
-// // alert("Helloo");
-// localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-// this.router.navigate(['/entity-screen']);
-// }
-// else if(clickedSidenavData.labelKey == '10114') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-// this.router.navigate(['/interest-rate-screen']);
-// }else if(clickedSidenavData.labelKey == '10011') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-// this.router.navigate(['/master-data-screen']);
-// }
-// else if(clickedSidenavData.labelKey == '10113') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   this.router.navigate(['/user-data']);
-// }
-// else if(clickedSidenavData.labelKey == '10117') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   this.router.navigate(['/roles-view']);
-// }
-// else if(clickedSidenavData.labelKey == '10115') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   this.router.navigate(['/interest-rate-screen']);
-// }
-// else if(clickedSidenavData.labelKey == '20215') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   this.router.navigate(['/closed-account-data']);
-// }
-// else if(clickedSidenavData.labelKey == '20211') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   this.router.navigate(['/nrlm-data-upload']);
-//   // window.location.reload();
-// }
-// else if(clickedSidenavData.labelKey == '20213') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   // this.router.navigate(['/view-accounts-upload']);
-//   this.router.navigate(['/accounts-data-upload']);
-//   // window.location.reload();
-// }
-// else if(clickedSidenavData.labelKey == '30031') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   // this.router.navigate(['/view-accounts-upload']);
-//   this.router.navigate(['/claims-processing-screen']);}
-// else if(clickedSidenavData.labelKey == '20217') {
-//   localStorage.setItem("sideNavbar",JSON.stringify(clickedSidenavData.entitlements))
-//   // this.router.navigate(['/view-accounts-upload']);
-//   this.router.navigate(['/claims-upload']);
-//   // window.location.reload();
-// }
-// }
 } 
