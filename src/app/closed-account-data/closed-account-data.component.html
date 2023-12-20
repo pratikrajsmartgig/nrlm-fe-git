@@ -28,7 +28,7 @@
                         <label class="unitLabels">FY Start</label>
                     </div>
                     <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7">
-                        <ng-select [clearable]="false" [(ngModel)]="selectedStartYear" (ngModelChange)="updateEndYears()" id="startYear">
+                        <ng-select [clearable]="false" [(ngModel)]="selectedStartYear" (ngModelChange)="updateEndYears()" id="startYear" style="margin-top: 4px;">
                             <ng-option *ngFor="let year of startYears" [value]="year">{{ year }}</ng-option>
                           </ng-select>
                     </div>
@@ -40,7 +40,7 @@
                         <label class="unitLabelss">FY End</label>
                     </div>
                     <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7">
-                        <ng-select [clearable]="false" placeholder="select year" [(ngModel)]="selectedEndYear" (ngModelChange)="EndYears()"  id="endYear">
+                        <ng-select [clearable]="false" placeholder="select year" [(ngModel)]="selectedEndYear" (ngModelChange)="EndYears()"  id="endYear" style="margin-top: 4px;">
                             <ng-option *ngFor="let year of endYears" [value]="year">{{ year }}</ng-option>
                         </ng-select>
                     </div>
@@ -58,7 +58,7 @@
                             <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
                         </div>
                         <div class="col-xxl-6 col-xl-6 col-md-6">
-                            <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative;right: 8px;">
+                            <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative;right: 4px;">
                         </div>
                     </div>
                     <div class="col-xxl-7 col-xl-8 col-md-8 me-4 selectdrpdwn" style="position: relative;right: 15px;">
@@ -125,8 +125,8 @@
                       <span (click)="UploadEntity()" [ngClass]="showhided ? 'uploadView':'uploadView1' "> Upload View</span>
                   </div>
                       <div>
-                          <img src="../../assets/image/view.svg" *ngIf="viewPermission && showhided" (click)="viewEnity()" title="Record View" style="left: 12px;position: relative;">
-                          <img *ngIf="fileView && showhided" src="../../assets/image/download.png"  (click)="downloadRecord()" title="Download" style="left: 18px;position: relative;">
+                          <img src="../../assets/image/view.svg" *ngIf="viewPermission && showhided" (click)="viewEnity()" title="Record View" style="left: 22px;position: relative;">
+                          <img *ngIf="fileView && showhided" src="../../assets/image/download.png"  (click)="downloadRecord()" title="Download" style="left: 25px;position: relative;">
                       </div>
                   </div>
             </div>
