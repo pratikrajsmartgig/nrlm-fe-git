@@ -20,7 +20,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 11px;
     margin-top: 7px;
     color: black;
@@ -38,7 +38,7 @@
 
 ::ng-deep.levelDropdownAcc.ng-select.ng-select-single .ng-select-container {
     height: 34px;
-    margin-left: -47px;
+    margin-left: -31px;
 }
 
 .ag-theme-alpine {
@@ -63,7 +63,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 80px;
     margin-top: 7px;
     color: black;
@@ -73,7 +73,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 91px;
     margin-top: 7px;
     color: black;
@@ -99,7 +99,7 @@
     background: white;
     /* margin-left: 4%; */
     /* height: 1152px; */
-    padding-left: 39px;
+    padding-left: 29px;
 }
 
 ::ng-deep.mat-mdc-tab-labels {
@@ -111,7 +111,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 12px;
     color: #F2B585;
 }
 
@@ -164,7 +164,7 @@
     border: 1px solid rgba(0, 0, 0, 0.33);
     border-radius: 7px;
     position: relative;
-    width: 69%;
+    width: 110% !important;
     font-size: inherit;
     font-family: inherit;
 }
@@ -178,7 +178,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 34px;
     color: #000000;
 }
@@ -194,7 +194,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78);
 }
@@ -206,7 +206,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
@@ -305,14 +305,14 @@
 .searchBarstyle {
     cursor: pointer;
     position: relative;
-    left: 70%;
+    left: 50%;
 }
 
 .searchbarInput {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 21px;
     width: 295px;
     height: 35px;
@@ -337,7 +337,8 @@
 }
 
 .startyDrp {
-    width: 45%;
+    margin: 8px;
+    width: 55%;
 }
 
 .gridUnit {
