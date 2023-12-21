@@ -38,7 +38,7 @@
 
 ::ng-deep.levelDropdownAcc.ng-select.ng-select-single .ng-select-container {
     height: 34px;
-    margin-left: -31px;
+    margin-left: -40px;
 }
 
 .ag-theme-alpine {
@@ -60,12 +60,12 @@
 }
 
 .unitLabel {
-    font-family: 'Roboto';
+       font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
-    padding-left: 80px;
-    margin-top: 7px;
+    padding-left: 62px;
+    margin-top: 15px;
     color: black;
 }
 
@@ -74,8 +74,8 @@
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
-    padding-left: 91px;
-    margin-top: 7px;
+    padding-left: 88px;
+    margin-top: 15px;
     color: black;
 }
 

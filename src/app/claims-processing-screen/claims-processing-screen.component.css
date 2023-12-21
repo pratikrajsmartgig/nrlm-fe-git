@@ -628,7 +628,7 @@ margin-left: 9%;
     margin-top: -24px;
 }
 ::ng-deep.ag-root-wrapper{
-    width: 102%;
+    width: 100%;
 }
 .claimScreen{
     height: 760px;

@@ -387,6 +387,9 @@ position: absolute;
     border-width: 0.5px;
 
 }
+.listItems{
+  font-size: 12px;
+}
 /*---*/
 .listItems:hover{
   color: gray;
@@ -415,6 +418,7 @@ position: absolute;
 .inside_header{
   margin-left: 5px;
   margin-top: 10px;
+  font-size: 13px;
 }
 
 .menulist{

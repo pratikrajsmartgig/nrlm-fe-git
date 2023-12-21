@@ -116,9 +116,9 @@
     font-weight: bold;
     font-size: 23px;
     line-height: 34px;
-    margin-left: 171px;
+    margin-left: 100px;
     color: #000000;
-    width: 66%;
+    width: 70%;
 }
 
 .searchIcon {
@@ -230,9 +230,10 @@
 }
 
 .searchBarstyle {
+      top: 7px;
+    left: 70px;
     cursor: pointer;
     position: relative;
-    margin-left: 150%;
 }
 
 .searchbarInput {
