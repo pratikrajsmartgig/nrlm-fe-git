@@ -30,20 +30,20 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 12px !important;
     color: black;
-    margin-left: 21px;
+    margin-left: 15px;
 }
 
 .unitLabelss {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 11px !important;
     color: black;
-    margin-left: 40px !important;
+    margin-left: 30px !important;
 }
 .unitLabelssM {
     font-family: 'Roboto';
@@ -82,8 +82,8 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    padding-left: 34%;
+    font-size: 12px;
+    padding-left: 32%;
     margin-top: 7px;
     color: black;
    
@@ -104,11 +104,11 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
      margin-top: 7px;
     color: black;
     width: 128px;
-    padding-left: 26%;
+    padding-left: 22%;
 }
 ::after :ng-deep.modal-backdrop.show{
     opacity: 0;
@@ -169,7 +169,7 @@
 .gridStyle {
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid rgba(0, 0, 0, 0.2);
-    height: 8%;
+    height: 50px;
     border-radius: 3px;
     width: 97%;
 }
@@ -316,7 +316,8 @@
 .searchBarstyle {
     cursor: pointer;
     position: relative;
-    left: 55%;
+    left: 28%;
+    top: 8px;
 }
 
 .searchbarInput {
@@ -325,7 +326,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    width: 295px;
+    width: 170px;
     height: 35px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -426,13 +427,13 @@
 
 .addImgIcon {
     position: relative;
-    cursor: pointer;
-    right: 15px;
+    right: 20px;
+    top: 10px;
 }
 .addImgIcon1 {
     position: relative;
-    cursor: pointer;
-    left: 20px;
+    left: 18px;
+    top: 10px;
 }
 img{
     cursor: pointer !important;
@@ -587,6 +588,7 @@ margin-left: 9%;
     cursor: pointer;
     background: #7BB31A;
     width: 105px;
+    margin-left: 20px;
 }
 
 .yearCol {
@@ -708,6 +710,8 @@ background-color: #7BB31A;
 
     .entityLabel {
         font-size: 15px !important;
+        width: 150px;
+        margin-top: 8px;
         /* Adjust font size for smaller screens */
     }
 
@@ -744,14 +748,14 @@ background-color: #7BB31A;
 }
 
 .viewImg{
-    cursor: pointer;
     position: relative;
-    left: 32px;
+    left: 18px;
+    top: 10px;
 }
 
 
 .editImg2{
-    left: 8px;
+    top: 10px;
+    left: 16px;
     position: relative;
-    cursor: pointer;
 }

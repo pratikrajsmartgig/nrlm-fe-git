@@ -44,7 +44,7 @@
                         <option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</option>
                     </select>                    
                 </div> -->
-                <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7">
+                <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7" style="bottom: 2px;right: 12px;position: relative;">
                     <ng-select [clearable]="false" [(ngModel)]="selectedFyEnding" (ngModelChange)="onSelectFinancialYearpopup()" placeholder="select year"  id="startYear" class="fyng qtrng">
                      
                         <ng-option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</ng-option>
@@ -62,7 +62,7 @@
                         <option *ngFor="let year of qtdata" [value]="year">{{ year }}</option>
                     </ng-select>
                 </div> -->
-                <div class="col-xxl-6 col-xl-6 col-lg-2 col-md-4">
+                <div class="col-xxl-6 col-xl-6 col-lg-2 col-md-4" style="bottom: 2px;right: 6px; position: relative;">
                     <ng-select [clearable]="false" [(ngModel)]="selectedQtrEnding" (ngModelChange)="qtrEnding($event)" placeholder="select year" id="endYear" class="qtrng">
                      
                         <ng-option style="width: 119px;" *ngFor="let year of qtdata"[value]="year">{{ year }}</ng-option>
@@ -75,17 +75,14 @@
                 <button class="btn btn-success btn-sm btnNRLM" (click)="getsghCodesbyYear()">Submit</button>
             </div> 
         </div> 
-        <div class="row ms-3 align-items-center justify-content-evenly gridStyle mt-2">
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 align-items-center d-flex justify-content-evenly pdfCol">
-                <div class="col-xxl-3 col-xl-3 col-md-3 d-flex justify-content-evenly" style="position: relative; right: 10px;">
-                    <div class="col-xxl-6 col-xl-6 col-md-6">
+        <div class="row gridStyle mt-2 ms-3">
+              <div class="col-1" style="top: 10px;position: relative;">
                         <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
-                    </div>
-                    <div class="col-xxl-6 col-xl-6 col-md-6">
-                        <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative; right: 8px;">
-                    </div>
-                </div>
-                <div class="col-xxl-7 col-xl-8 col-md-8 me-4 selectdrpdwn" style="position:relative; left: 0px;">
+            </div>
+            <div class="col-1" style="right: 58px;top: 10px;position: relative;">
+                        <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="margin-left: 10px;">
+            </div>
+                <div class="col-3" style="right: 80px;top: 6px; position: relative; width: 28%;">
                     <form [formGroup]="myForms">
                     <!-- Use different methods -->
                     <ng-multiselect-dropdown class="promo statuses111 columnDrp" formControlName="name" title="Select Columns"
@@ -133,7 +130,6 @@
                         </ng-template>
                     </div>
                 </div> -->
-            </div>
             <div class="col-xxl-3 col-xl-2 col-lg-3 col-md-2 col-sm-6 text-center">
                 <label class="entityLabel ">Claims Processing </label>
             </div>  
@@ -167,7 +163,7 @@
                     <img src="../../assets/image/edit.svg"  title="Edit" (click)="EditEntityDialog()" class="editImg2">
                 </div>
             
-                <div  class="col-2" *ngIf="authorizePermission && showhided  && loginUserId !== makerId && celldata?.status ==='P'" >
+                <div  class="col-2" *ngIf="authorizePermission && showhided  && loginUserId !== makerId && celldata?.status ==='P'" style="right: 10px;top: 10px;position: relative;">
                     <img src="../../assets/image/Authorize-button.svg" (click)="AuthorizeEntity()" title="Authorize">
             
                 </div>

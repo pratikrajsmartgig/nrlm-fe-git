@@ -227,7 +227,7 @@
         <img src="../../assets/image/notes-icon.svg" class="notes-icon " data-toggle="modal" data-target="#exampleModalNotes">
       </div> -->
       <div class="col-4 d-flex justify-content-between">
-        <div style="position: relative; left: 12%;width: 65%;">
+        <div style="position: relative; left: 10%;width: 65%;">
           <img title="Upload Documents" src="../../assets/image/notes-icon.svg" class="notes-icon" data-toggle="modal"
           data-target="#exampleModalNotes">
         </div>
@@ -249,19 +249,19 @@
         *ngIf="((authorizationClaim!==true) && ((claimsCellData?.status==='U'|| claimsCellData?.status==='R') && claimsCellData?.pending === 1)) || (authorizationClaim!==true && ((claimsCellData?.status==='R'|| claimsCellData?.status==='U')))"
         class="col-2"></div>
       <!-- <div class="col-1"></div> -->
-      <div class="col-1 mt-2" *ngIf="!authorizationClaim" style="position: relative; right: 5%;">
+      <div class="col-1 mt-2" *ngIf="!authorizationClaim" style="position: relative; right: 13%;">
         <button type="button" (click)="back()" class="btn btn-primary backButton">Back</button>
       </div>
-      <div class="col-1 mt-2" style="position: relative; right: 3%;"
+      <div class="col-1 mt-2" style="position: relative; right: 9%;"
         *ngIf="((authorizationClaim!==true) && ((claimsCellData?.status==='U'|| claimsCellData?.status==='R') && claimsCellData?.pending === 1)) || (authorizationClaim!==true && ((claimsCellData?.status==='R'|| claimsCellData?.status==='U')))">
         <button type="button" (click)="reset()" class="btn btn-primary resetButton">Reset</button>
       </div>
-      <div class="col-1 mt-2" [hidden]="hideDelete" *ngIf="deletePermission && !ComeFromView && showRejectOnly === true"  style="position: relative; right: 1%;">
+      <div class="col-1 mt-2" [hidden]="hideDelete" *ngIf="deletePermission && !ComeFromView && showRejectOnly === true"  style="position: relative; right: 5%;">
         <button type="button" (click)="deleteDialog()"
           class="btn btn-primary deleteButton">Delete</button>
       </div>
 
-      <div class="col-1 mt-2" style="position: relative; left: 1%;"
+      <div class="col-1 mt-2" style="position: relative; right: 1%;"
         *ngIf="((authorizationClaim!==true) && ((claimsCellData?.status==='U'|| claimsCellData?.status==='R') && claimsCellData?.pending === 1)) || (authorizationClaim!==true && ((claimsCellData?.status==='R'|| claimsCellData?.status==='U')))">
         <button type="button" [disabled]="disableSaveSubmit" (click)="SaveEditData()"
           class="btn btn-primary SaveButton">Save</button>
