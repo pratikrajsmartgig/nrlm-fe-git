@@ -113,7 +113,7 @@
                         <!-- <img  src="../../assets/image/upload.svg" *ngIf="uploadPermission && EditPermission" title="Upload" class="upload-img"
                             [ngClass]="{ 'disabled': checker === maker }" data-bs-toggle="modal"
                             data-bs-target="#exampleModalUpload"> -->
-                            <span style="background-color: #000000;color: white;padding: 0.3rem;border-radius: 5px;"data-bs-toggle="modal" data-bs-target="#exampleModalUpload" [ngClass]="{ 'disabled': checker === maker }" *ngIf="uploadPermission && EditPermission"> Upload File</span>
+                            <span style="background-color: #000000;color: white;padding: 0.3rem;border-radius: 5px; margin-left: 7%;"data-bs-toggle="modal" data-bs-target="#exampleModalUpload" [ngClass]="{ 'disabled': checker === maker }" *ngIf="uploadPermission && EditPermission"> Upload File</span>
                             <img   *ngIf="viewPermission && showhided && uploadFileType ==='nrlm'  && item!=='20215' &&  item!=='20217'  " src="../../assets/image/view.svg" (click)="viewEnity()" title="View" style="margin-left: 3%;">
                             <img   *ngIf="viewPermission && showhided && uploadFileType === 'account' && item!=='20215'&&  item!=='20217' " src="../../assets/image/view.svg" (click)="viewAccountsEnity()" title="View" style="margin-left: 3%;">
                             <img   *ngIf="viewPermission && showhided && uploadFileType != 'account' && uploadFileType === 'claimsUpload' && item==='20217' " src="../../assets/image/view.svg" (click)="viewclaimsaccount()" title="View" style="margin-left: 3%;">

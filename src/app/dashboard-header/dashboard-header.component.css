@@ -32,22 +32,22 @@
     /* bottom: 6px; */
 }
 .nabardCol{
-    position: absolute;
-    left: 45rem;
-    top: 8%;
+    position: relative;
+    left: 35rem;
+   margin-top: 15px;
 }
 .logoutCol{
-    position: absolute;
-    top: 17%;
-    left: 880%;
+    position: relative;
+    left: 45rem;
+
 }
 .arrowLogo{
-    padding-top: 42%;
+    padding-top: 22%;
     /* width: 66%; */
-    padding-left: 159%;
+    padding-left: 139%;
     position: relative;
     /* left: 1220px; */
-    margin-top: 8px;
+    /* margin-top: 8px; */
     cursor: pointer;
 }
 @supports (-moz-appearance:none) {
