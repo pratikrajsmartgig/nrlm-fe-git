@@ -8,6 +8,9 @@ import { DOCUMENT } from '@angular/common';
 import { AlertScreenComponent } from '../alert-screen/alert-screen.component';
 import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
 import { WarningAuthDialogComponent } from '../warning-auth-dialog/warning-auth-dialog.component';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login-popup',
@@ -18,8 +21,12 @@ export class LoginPopupComponent {
   @ViewChild(ErrorDialogComponent) errordialog: ErrorDialogComponent | undefined;
   @ViewChild(WarningAuthDialogComponent) passwordChanged: WarningAuthDialogComponent | undefined;
   hide = true;
+  protected aFormGroup!: FormGroup;
+  siteKey: string = "6LfqAjEpAAAAADHg23ChxvP883YT383_JxaVI_pt";
+  captchatoken: any;
   constructor(private dialogRef: MatDialogRef<LoginPopupComponent>,
-    public dialog: MatDialog, private loginService: LoginServiceService, private router: Router) { }
+    public dialog: MatDialog, private loginService: LoginServiceService, 
+    private router: Router,private formBuilder: FormBuilder,private recaptchaV3Service: ReCaptchaV3Service) { }
   username: any;
   password: any;
   newpassword: any;
@@ -59,6 +66,26 @@ export class LoginPopupComponent {
   //   }
   //   this.dialogRef.close();
   //  }
+  // resolved(captchaResponse:any) {
+  //   console.log(`Resolved captcha with response: ${captchaResponse}`);
+  // }
+
+  // onSubmit(): void {
+  //   this.recaptchaV3Service.execute('importantAction').subscribe((token: string) => {
+  //     console.log(`Received reCAPTCHA token: ${token}`);
+ 
+  //   });
+  // }
+
+  send(): void {
+ 
+    this.recaptchaV3Service.execute('importantAction')
+    .subscribe((token: string) => {
+      this.captchatoken = token;
+      this.login();
+      console.log(`Token [${token}] generated`);
+    });
+  }
 
   createpassword() {
     this.dialog.open(LoginPopupComponent, { panelClass: 'AddUsersSuccessPop', disableClose: true, hasBackdrop: true, backdropClass: 'backdropBackground' });
@@ -160,6 +187,9 @@ export class LoginPopupComponent {
       this.getcreatepasswordscreen = false;
       this.loginscreen = true;
     }
+    this.aFormGroup = this.formBuilder.group({
+      recaptcha: ['', Validators.required]
+    });
 
   }
   // close() {
@@ -167,13 +197,14 @@ export class LoginPopupComponent {
   //   this.dialogRef.close();
   // }
   login() {
-
+    console.log(this.captchatoken);
+    localStorage.setItem('captchatoken', this.captchatoken);
     if (this.username != undefined && this.username != '' && this.password != undefined && this.password != '') {
       let isLogout = false;
       localStorage.setItem("userName", this.username);
       localStorage.setItem("Password", this.password);
       localStorage.setItem("LeCode", this.LeCode)
-      this.loginService.getloginDeatils(this.username, this.password, isLogout).subscribe((res: any) => {
+      this.loginService.getloginDeatils(this.username, this.password,this.captchatoken,isLogout).subscribe((res: any) => {
         console.log("Response", res.length)
 
         if (res) {

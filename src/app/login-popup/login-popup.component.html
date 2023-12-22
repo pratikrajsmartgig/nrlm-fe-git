@@ -146,6 +146,28 @@ left: 14px;">
           <div class="col-4" (click)="forgotPassword()">
             <label class="forgotPasswrd">Forgot/Reset Password?</label>
           </div>
+          <!-- <form>
+          
+            <re-captcha (resolved)="resolved($event)" siteKey="6LfLTjcpAAAAAIwR4tRiU69N9wTh2V2hYt56Z5e6"></re-captcha>
+          
+          </form> -->
+          <!-- <form (ngSubmit)="onSubmit()">
+      
+            <button type="submit">Captcha</button>
+        </form> -->
+        <!-- <form [formGroup]="aFormGroup">
+          <ngx-recaptcha2 #captchaElem
+            [siteKey]="siteKey"
+            formControlName="recaptcha">
+          </ngx-recaptcha2>
+        </form> -->
+        <!-- <form #form="ngForm">
+          <div class="row mt-3">
+            <div class="col-sm-12 mb-2">
+              <button type="button" class="btn btn-sm btn-primary" (click)="send()">Send</button>
+            </div>
+          </div>
+        </form> -->
         </div>
       </div>
     </div>
@@ -154,7 +176,7 @@ left: 14px;">
       <div class="col-3"></div>
       <div class="col-5">
         <button type="button" class="btnselectRole btn-primary" data-toggle="button" aria-pressed="false"
-          autocomplete="off" (click)="login()" [disabled]="!username || !password">
+          autocomplete="off" (click)="send()" [disabled]="!username || !password">
           Login
         </button>
         <p class="errText">{{errorMessageloginFailed}}</p>

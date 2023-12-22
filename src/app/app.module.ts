@@ -85,6 +85,8 @@ import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 import { NumberFormatPipe } from './number-format.pipe';
 import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
+import { RecaptchaModule, RecaptchaFormsModule,RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY  } from 'ng-recaptcha';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -161,6 +163,10 @@ import { LogoutDialogComponent } from './logout-dialog/logout-dialog.component';
     NgbOffcanvasModule,
     MatExpansionModule,
     HttpClientModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    RecaptchaV3Module,
+    NgxCaptchaModule,
     TranslateModule.forRoot({
 loader: {
   provide:TranslateLoader,
@@ -181,7 +187,10 @@ loader: {
   
     
   ],
-  providers: [ { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true,
+  providers: [   {
+    provide: RECAPTCHA_V3_SITE_KEY,
+    useValue: '6LfLTjcpAAAAAIwR4tRiU69N9wTh2V2hYt56Z5e6', // Replace with your actual site key
+  }, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true,
    },DatePipe],
   bootstrap: [AppComponent]
 })

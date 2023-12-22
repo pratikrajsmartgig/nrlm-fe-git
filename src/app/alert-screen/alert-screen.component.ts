@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LoginPopupComponent } from '../login-popup/login-popup.component';
 import { LoginServiceService } from '../services/login-service.service';
 import { SelectRolesPopupComponent } from '../select-roles-popup/select-roles-popup.component';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
 @Component({
   selector: 'app-alert-screen',
   templateUrl: './alert-screen.component.html',
@@ -19,6 +20,7 @@ showLogoutPopup:boolean =false;
 rolesData:any = [];
 validRoles: any = [];
 rolesLength:any;
+captchatoken: any;
   ngOnInit(): void {
     let popupText =localStorage.getItem('errorMessage');
   this.username =  localStorage.getItem("userName");
@@ -31,16 +33,30 @@ this.showLogoutPopup = true;
     }
     // alert(this.accountLockMsg);
   }
-  constructor(private dialogRef: MatDialogRef<any>,public dialog: MatDialog,private router: Router,private loginService: LoginServiceService) { }
+  constructor(private dialogRef: MatDialogRef<any>,public dialog: MatDialog,private router: Router,private loginService: LoginServiceService,private recaptchaV3Service: ReCaptchaV3Service) { }
   closepopup() {
 
     this.dialogRef.close();
 
   }
+
+  send(): void {
+ 
+    this.recaptchaV3Service.execute('importantAction')
+    .subscribe((token: string) => {
+      this.captchatoken = token;
+      this.goLogin();
+      console.log(`Token [${token}] generated`);
+    });
+  }
+
   goLogin() {
     this.dialogRef.close();
     let isLogout = true;
-    this.loginService.getloginDeatils(this.username, this.password, isLogout).subscribe((res: any) => {
+    // let captchatoken =   localStorage.getItem('captchatoken');
+    // console.log(captchatoken);
+ 
+    this.loginService.getloginDeatils(this.username, this.password,this.captchatoken, isLogout).subscribe((res: any) => {
       console.log("Response", res)
       if (res) {
         localStorage.setItem("loginUserId",res.userId);

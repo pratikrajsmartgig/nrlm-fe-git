@@ -24,6 +24,7 @@ export class LogoutScreenComponent {
            
         this.router.navigate(['/home']);
         window.localStorage.clear();
+        window.sessionStorage.clear();
       }
     },
       (err: any) => {

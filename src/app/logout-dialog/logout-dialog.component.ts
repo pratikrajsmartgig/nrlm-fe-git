@@ -33,7 +33,7 @@ openDialog() {
       }
     );
     window.localStorage.clear();
-   
+   window.sessionStorage.clear();
     }
     preventClose(event: MouseEvent): void {
       // Stop event propagation to prevent closing the popup
