@@ -14,7 +14,7 @@
 
 .regionalInput {
     position: relative;
-    right: 81px;
+    right: 60px;
     border: 1px solid grey;
     border-radius: 6px;
     height: 35px;
@@ -27,7 +27,7 @@
 }
 
 .colFF {
-    margin-top: 22px;
+    margin-top: 18px;
     /* margin-left: 103px; */
 }
 
@@ -38,7 +38,7 @@
 
 .yearCols {
     margin-top: 19px;
-    margin-left: -35px;
+    margin-left: -25px;
     width: 11.5%;
 }
 
@@ -55,7 +55,7 @@
 .dateInput {
     width: 120px;
     height: 36px;
-    margin-left: -35px;
+    margin-left: -28px;
 }
 
 .container,
@@ -86,7 +86,7 @@
     background-color: #00A2FF;
     margin-top: 3px;
     margin-bottom: 3px;
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 .modal-footer a {

@@ -8,7 +8,7 @@
     background: white;
     /* margin-left: 4%; */
     /* height: 1152px; */
-    padding-left: 39px;
+    padding-left: 20px;
 }
 .userScreen {
     height: 730px;
@@ -40,7 +40,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    width: 100%;
+    width: 101%;
 }
 
 /* ::ng-deep.mat-mdc-tab-body-wrapper {
@@ -120,7 +120,7 @@ margin-left: 2px;
     font-weight: bold;
     font-size: 23px;
     line-height: 34px;
-    margin-left: 235px;
+    margin-left: 185px;
     color: #000000;
 }
 
@@ -211,7 +211,7 @@ margin-left: 2px;
 .colStyleIcon{
     margin-top: 10px;
     cursor: pointer;
-    margin-left: 18%;
+    margin-left: 16%;
 }
 .colStylee {
     margin-top: 10px;
@@ -229,7 +229,7 @@ margin-left: 2px;
     cursor: pointer;
     position: relative;
     /* left: 84%; */
-    left: 100px;
+    left: 80px;
 }
 
 .searchbarInput {
@@ -238,7 +238,7 @@ margin-left: 2px;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    width: 295px;
+    width: 160px;
     height: 35px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -306,7 +306,8 @@ margin-left: 2px;
     font-family: inherit;
 }
 .formstyle{
-    width:122%;
+    width:215px;
+    margin-top: 0.3rem;
 }
 .image{
     margin-left: 45px;

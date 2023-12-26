@@ -8,7 +8,7 @@
     background: white;
     /* margin-left: 4%; */
     /* height: 1152px; */
-    padding-left: 39px;
+    padding-left: 20px;
 }
 
 ::ng-deep.mat-mdc-tab-labels {
@@ -41,7 +41,7 @@
 
 .gridRow {
     /* height: 535px; */
-    width: 100%;
+    width: 101%;
     background: rgba(255, 255, 255, 0.78);
     opacity: 0.78;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -195,7 +195,7 @@
 .colStyle {
     margin-top: 2px;
     cursor: pointer;
-    margin-left: 24px;
+    margin-left: 10%;
 }
 
 .colStyleIcon {
