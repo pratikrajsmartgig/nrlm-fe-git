@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="col-xxl-7 col-xl-9 col-md-8 me-4 selectdrpdwn" style="position: relative; left: 20px;">
-                            <form [formGroup]="myForms">
+                            <form [formGroup]="myForms" style="width: 240px;">
                                 <!-- Use different methods -->
                                 <ng-multiselect-dropdown class="promo statuses111 columnDrp" formControlName="name"
                                     title="Select Columns" [settings]="dropdownSettings" [data]="toppingList"
@@ -135,7 +135,7 @@
                         </div> -->
                     </div>
                     <div class="col-xxl-3 col-xl-2 col-lg-3 col-md-2 col-sm-6 text-center">
-                        <label class="entityLabel ms-3" style="position: relative; left: 60px;">Claims Settlement </label>
+                        <label class="entityLabel ms-3" style="position: relative; left: 60px; width: 220px;">Claims Settlement </label>
                     </div>
                     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3  col-sm-3">
                         <div class="searchBox d-flex searchBarstyle">
@@ -150,13 +150,12 @@
                         data-bs-target="#exampleModalUpload">
                 
                     </div> -->
-                    <div class="col-1" *ngIf="viewPermission && showhided" style="left: 48%; position: relative;">
+                    <div class="col-1" *ngIf="viewPermission && showhided" style="left: 50%; position: relative;">
                         <img src="../../assets/image/view.svg" data-bs-toggle="modal" data-bs-target="#exampleModalUpload" (click)="viewClaimsData()" class="editImg"
                             title="View Claims">
                     </div>
-
-                        <div class="col" style="position: relative; left: 53%;">
-                            <img src="../../assets/image/edit.svg" class="editImg" title="Edit" *ngIf="EditPermission  && showhided &&(celldata.approvalStatus === 'U' || celldata.approvalStatus === 'E' || celldata.approvalStatus === 'R')"
+                        <div class="col" style="position: relative; left: 58%;">
+                            <img src="../../assets/image/edit.svg" class="editImg" title="Edit" *ngIf = "EditPermission  && showhided &&(celldata.approvalStatus === 'U' || celldata.approvalStatus === 'E' || celldata.approvalStatus === 'R')"
                                 data-bs-toggle="modal" data-bs-target="#exampleModalUpload" (click)="editClaimsData()">
                         </div>
                         <div class="col-2" style="position: relative; left: 38px;" *ngIf="authorizePermission && showhided  && loginUserId !== makerId && celldata?.approvalStatus ==='S'">

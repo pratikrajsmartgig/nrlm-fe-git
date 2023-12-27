@@ -23,7 +23,7 @@
     opacity: 0.78;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    width: 100%;
+    width: 101%;
 }
 
 /* .unitLabels {
@@ -65,7 +65,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    padding-left: 73px;
+    padding-left: 55px;
     margin-top: 8px !important;
     color: black;
     /* margin-left: 9px; */
@@ -118,7 +118,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    padding-left: 35%;
+    padding-left: 26%;
     margin-top: 8px;
     color: black;
    
@@ -172,8 +172,7 @@
     font-size: 14px;
      margin-top: 7px;
     color: black;
-    width: 128px;
-    padding-left: 26%;
+    padding-left: 15%;
 }
 ::after :ng-deep.modal-backdrop.show{
     opacity: 0;
@@ -192,7 +191,7 @@
     background: white;
     /* margin-left: 4%; */
     /* height: 1152px; */
-    padding-left: 39px;
+    padding-left: 20px;
     padding-bottom: 27px;
     /* padding-top: 20px; */
     /* overflow-y: scroll;   */
@@ -393,7 +392,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    width: 295px;
+    width: 160px;
     height: 35px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -978,7 +977,7 @@ margin-top: 1%;
 }
 .pdfImg2{
   position: relative;
-  right: 8px;
+  left: 20px;
 }
 .pdfImg3{
     position: relative;
@@ -986,7 +985,7 @@ margin-top: 1%;
 }
 .pdfImg4{
   position: relative;
-  right: 7px;
+  left: 22px;
 }
 .pdfImg5{
   position: relative;
