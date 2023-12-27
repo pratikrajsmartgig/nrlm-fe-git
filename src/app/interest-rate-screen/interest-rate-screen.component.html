@@ -62,7 +62,7 @@
                             <img (click)="downloadExcel()" src="../../assets/image/excel icon.svg" data-bs-toggle="tooltip" data-bs-placement="top" title="Download Excel">
                         </div>
                         <div class="col-3 colStyles">
-                            <form [formGroup]="myForms">
+                            <form [formGroup]="myForms" style="width: 265px;">
                                 <!-- Use different methods -->
                                 <ng-multiselect-dropdown class="promo statuses111" formControlName="name"
                                     [settings]="dropdownSettings" [data]="toppingList" (onSelect)="ColumnSelect($event)"

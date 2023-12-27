@@ -225,7 +225,7 @@
     cursor: pointer;
 }
 .colStylesss {
-    margin-top: 10px;
+    margin-top: 12px;
     cursor: pointer;
     /* position: relative;
     left: 8.5%; */
@@ -270,7 +270,7 @@
 
 .colAdd {
     position: relative;
-    margin-top: 10px;
+    margin-top: 12px;
     left: 105px;
     cursor: pointer;
 }
@@ -523,8 +523,8 @@ width: 99%;
 
 .colAdd1{
     position: relative;
-    margin-top: 10px;
-    left: 120px;
+    margin-top: 12px;
+    left: 148px;
     cursor: pointer;
 }
 

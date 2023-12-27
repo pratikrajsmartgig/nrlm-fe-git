@@ -60,11 +60,11 @@
                         <img (click)="generatePDF(gridOptions)" src="../../assets/image/pdf icon.svg" title="Download PDF">
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-md-6">
-                        <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative; right: 8px;">
+                        <img (click)="onBtnExport()" src="../../assets/image/excel icon.svg" title="Download Excel" style="position: relative; right: 0px;">
                     </div>
                 </div>
                 <div class="col-xxl-7 col-xl-8 col-md-8 me-4 selectdrpdwn" style="position: relative; right: 15px;" >
-                    <form [formGroup]="myForms">
+                    <form [formGroup]="myForms" style="width: 215px;">
                     <!-- Use different methods -->
                     <ng-multiselect-dropdown class="promo statuses111" formControlName="name"
                         [settings]="dropdownSettings" [data]="toppingList" (onSelect)="ColumnSelect($event)"
@@ -128,8 +128,8 @@
                 <span (click)="UploadEntity()" [ngClass]="showhided ? 'uploadView':'uploadView1' "> Upload View</span>
             </div>
                 <div>
-                    <img src="../../assets/image/view.svg" *ngIf="viewPermission && showhided" (click)="viewEnity()" title="Record View" style="left: 8px;position: relative;">
-                    <img *ngIf="fileView && showhided" src="../../assets/image/download.png"  (click)="downloadRecord()" title="Download" style="left: 14px;position: relative;">
+                    <img src="../../assets/image/view.svg" *ngIf="viewPermission && showhided" (click)="viewEnity()" title="Record View" style="left: 30px;position: relative;">
+                    <img *ngIf="fileView && showhided" src="../../assets/image/download.png"  (click)="downloadRecord()" title="Download" style="left: 40px;position: relative;">
                 </div>
             </div>
 

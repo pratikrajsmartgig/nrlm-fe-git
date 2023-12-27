@@ -246,7 +246,7 @@
                                 <!-- <img src="../../assets/image/upload.svg" (click)="UploadEntity()" class="editImg" title="Upload Entity"> -->
                                 <span style="background-color: #000000;color: white;padding: 0.3rem;border-radius: 5px;position: relative;top: 5px;" class="editImg" title="Upload Entity" (click)="UploadEntity()"> Upload View</span>
                             </div>
-                            <div class="col-2" *ngIf="viewPermission && showhided " style="margin-left: 5px; margin-right: 5px;">
+                            <div class="col-2" *ngIf="viewPermission && showhided">
                                 <img  src="../../assets/image/view.svg" (click)="viewEnity()"class="viewEn" title="View Entity" [ngClass]="uploadPermission ? 'viewEn': 'viewEn1'" >
                         
                             </div>  

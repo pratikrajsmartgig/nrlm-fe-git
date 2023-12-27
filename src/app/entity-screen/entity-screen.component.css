@@ -60,7 +60,7 @@
 .editImg1 {
      cursor: pointer;
      position: relative;
-     right: 28px;
+     right: 35px;
 }
 .editImg2 {
      cursor: pointer;
@@ -249,7 +249,9 @@
 .colStyleIcon{
     margin-top: 10px;
     cursor: pointer;
-    margin-left: 12%;
+    width: 255px;
+    position: relative;
+    left: 120px;
 }
 
 .colStylee {
@@ -451,7 +453,7 @@
 
 
 .search1{
-    margin-left: 11%;
+    margin-left: 4%;
 }
 .search2{
     margin-left: 12.5%;

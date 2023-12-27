@@ -32,7 +32,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    padding-left: 70px;
+    padding-left: 50px;
     margin-top: 7px;
     color: black;
 }
@@ -283,7 +283,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    width: 295px;
+    width: 170px;
     height: 35px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -540,9 +540,8 @@ margin-left: -17%;
 @media only screen and (max-width: 1440px) {
       
     .entityLabel {
-      font-size: 15px !important; /* Adjust font size for smaller screens */
-      left: 45px;
-      position: relative;
+        width: 200px;
+    font-size: 15px !important;
     }
    
     /* img{
