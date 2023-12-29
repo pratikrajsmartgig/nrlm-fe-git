@@ -93,7 +93,14 @@ export class AddEntityComponent {
       this.getLevelsData();
     }
     this.activeRoute.queryParamMap.subscribe((data:any)=>{
-      this.mode = data.params.mode      
+      this.mode = data.params.mode   
+      console.log(this.mode);
+      if (this.mode == 'Add') {
+        this.UnitCode = ''
+        // this.dissbleBtn = false
+        this.HOCheck = false
+      }
+         
     })
     // this.changeLevel();
   }
@@ -108,12 +115,13 @@ export class AddEntityComponent {
     //alert(this.changeLevelIden);
     this.entityService.getLevels(this.changeLevelIden).subscribe((res: any) => {
     console.log(res.data);
-      if (res) {
-        if(this.unitCode == 'HO'){
-          this.levelsData = [{level: 1, levelName: 'Head Office'}]
-        }else{
+    if (res) {
           this.levelsData = res?.data;
-        }
+        // if(this.unitCode == 'HO'){
+        //   this.levelsData = [{level: 1, levelName: 'Head Office'}]
+        // }else{
+          // this.levelsData = res?.data;
+        // }
         }
          // this.levelsData.pop();      }
       console.log(this.levelsData);

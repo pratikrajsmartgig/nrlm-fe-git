@@ -250,7 +250,7 @@
                                 <img  src="../../assets/image/view.svg" (click)="viewEnity()"class="viewEn" title="View Entity" [ngClass]="uploadPermission ? 'viewEn': 'viewEn1'" >
                         
                             </div>  
-                            <div class="col-2" *ngIf="AddPermission && this.roleCode!==3" style="margin-right: 5px;">
+                            <div class="col-2" *ngIf="AddPermission" style="margin-right: 5px;">
                                 <img src="../../assets/image/add new icon.svg" title="Add Entity" class="addImgIcon" (click)="addEntity()"  style="position: relative; right: 0px;">
                             </div>
                               <!-- <div class="col-2" *ngIf="EditPermission && showhided && loginUserId !== makerId && StatusName !=='Rejected' && StatusName !=='Authorized'" >
