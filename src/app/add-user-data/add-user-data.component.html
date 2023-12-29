@@ -31,7 +31,7 @@
 
                     <div class="col-md-3">
                         <label class="unitcodeLabel">Level *</label>
-                        <ng-select [disabled]="authorziedUser" [items]="levelsData" (change)=changeLevel($event) [clearable]="false"
+                        <ng-select [disabled]="authorziedUser" [items]="levelsData" (change)="changeLevel($event)" [clearable]="false"
                             class="levelDropdown" id="levelSt" name="levelSt" placeholder="Select Level"
                             bindLabel="levelName" bindValue="level" [(ngModel)]="Level" required #levelSt="ngModel">
                         </ng-select>

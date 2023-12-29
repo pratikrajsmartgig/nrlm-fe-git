@@ -27,6 +27,12 @@
 
 }
 
+::ng-deep.modal-content{
+    width: 85%;
+    height: 110px;
+    margin-left: 150px;
+}
+
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
     font-family: 'Poppins';
     font-style: normal;
@@ -34,6 +40,9 @@
     font-size: 17px;
     color: black;
 }
+::ng-deep.modal-backdrop{
+    position: relative;
+   }
 
 ::ng-deep.mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
 .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
