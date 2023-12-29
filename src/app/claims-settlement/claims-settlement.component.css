@@ -181,6 +181,10 @@
     transition: opacity .5s linear;
 }
 
+::ng-deep.modal-backdrop {
+  position: relative;
+}
+
 .container,
 .container-fluid,
 .container-lg,
