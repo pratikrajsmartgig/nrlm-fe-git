@@ -170,7 +170,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78);
 }
@@ -182,7 +182,8 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
+    /* font-family: Roboto; */
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
