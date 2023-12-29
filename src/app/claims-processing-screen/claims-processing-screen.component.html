@@ -44,7 +44,7 @@
                         <option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</option>
                     </select>                    
                 </div> -->
-                <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7" style="bottom: 2px;right: 12px;position: relative;">
+                <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-7" style="bottom: 2px;right: 8px;position: relative;">
                     <ng-select [clearable]="false" [(ngModel)]="selectedFyEnding" (ngModelChange)="onSelectFinancialYearpopup()" placeholder="select year"  id="startYear" class="fyng qtrng">
                      
                         <ng-option *ngFor="let year of startYearspopup" [value]="year">{{ year }}</ng-option>
@@ -62,7 +62,7 @@
                         <option *ngFor="let year of qtdata" [value]="year">{{ year }}</option>
                     </ng-select>
                 </div> -->
-                <div class="col-xxl-6 col-xl-6 col-lg-2 col-md-4" style="bottom: 2px;right: 6px; position: relative;">
+                <div class="col-xxl-6 col-xl-6 col-lg-2 col-md-4" style="bottom: 2px;right: 4px; position: relative;">
                     <ng-select [clearable]="false" [(ngModel)]="selectedQtrEnding" (ngModelChange)="qtrEnding($event)" placeholder="select year" id="endYear" class="qtrng">
                      
                         <ng-option style="width: 119px;" *ngFor="let year of qtdata"[value]="year">{{ year }}</ng-option>
@@ -196,7 +196,7 @@
 <div class="modal fade modal-xl" id="exampleModalUpload" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true" #myModal >
     <div class="modal-dialog modal-dialog-centered">
-        <div class="container modal-content">
+        <div class="container modal-content"  style="width: 1050px; margin-left: 150px;">
                 <div class="row d-flex">
                 <div class="col-4">
                    
