@@ -46,12 +46,24 @@ h1 {
 .cancel-button {
     margin-left: 50px;
     background-color: #ccc;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    line-height: 40px;
+    width: 50px;
 }
 
 .delete-button {
     margin-left: 90px;
     background-color: red;
     color: #fff;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    line-height: 40px;
+    width: 50px;
 }
 
 .close-button {
@@ -70,4 +82,8 @@ h1 {
     margin-left: 70px;
     margin-top: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+::ng-deep.mat-toolbar{
+font-size: 16px;
 }

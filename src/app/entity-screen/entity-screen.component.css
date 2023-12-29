@@ -6,7 +6,7 @@
 .container-xl,
 .container-xxl {
     background: white;
-    padding-left: 20px;
+    padding-left: 29px;
 }
 
 ::ng-deep.mat-mdc-tab-labels {
