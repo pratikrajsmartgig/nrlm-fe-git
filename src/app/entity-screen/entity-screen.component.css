@@ -6,7 +6,7 @@
 .container-xl,
 .container-xxl {
     background: white;
-     padding-left: 20px;
+    padding-left: 20px;
 }
 
 ::ng-deep.mat-mdc-tab-labels {
@@ -35,7 +35,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     width: 101%;
-    margin-top: -10px
+    margin-top: -5px
 }
 
 :host ::ng-deep.mat-mdc-tab-body-content {
@@ -55,77 +55,88 @@
 }
 
 .editImg {
-     cursor: pointer;
-}
-.editImg1 {
-     cursor: pointer;
-     position: relative;
-     right: 35px;
-}
-.editImg2 {
-     cursor: pointer;
-     position: relative;
-     left: 2px;
-}
-.editImg3 {
-     cursor: pointer;
-     position: relative;
-     right: 28px;
-}
-.editImg4 {
-     cursor: pointer;
-     position: relative;
-     left: 2px;
+    cursor: pointer;
 }
 
-.deleteImg{
+.editImg1 {
+    cursor: pointer;
+    position: relative;
+    right: 35px;
+}
+
+.editImg2 {
+    cursor: pointer;
+    position: relative;
+    left: 2px;
+}
+
+.editImg3 {
+    cursor: pointer;
+    position: relative;
+    right: 28px;
+}
+
+.editImg4 {
+    cursor: pointer;
+    position: relative;
+    left: 2px;
+}
+
+.deleteImg {
     bottom: 30px;
     position: relative;
     left: 168px;
     cursor: pointer;
 }
-.deleteImg1{
+
+.deleteImg1 {
     position: relative;
-    left:4px;
+    left: 4px;
     cursor: pointer;
 }
-.authImg{
+
+.authImg {
     right: 25px;
     position: relative;
     cursor: pointer;
 }
-.authImg1{
+
+.authImg1 {
     right: 0px;
     position: relative;
     cursor: pointer;
 }
+
 .gridStyle {
     background: rgba(255, 255, 255, 0.78);
- 
+
     border: 1px solid rgba(0, 0, 0, 0.2);
     height: 50px;
- 
+
     border-radius: 3px;
     margin-left: 1px;
     margin-right: 1px;
     width: 100%;
-    
+
 }
-.gridStyleMain{
+
+.gridStyleMain {
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid rgba(0, 0, 0, 0.2);
     height: 475px;
     border-radius: 3px;
-     padding-left: 19px;
+    padding-left: 19px;
     padding-top: 10px;
     margin-top: 8px;
-    
+
 }
-.paginDiv{
-    position:relative; 
+
+.paginDiv {
+    position: relative;
     bottom: 7%;
     left: 63%;
 }
+
 /*-- Dropdown --*/
 .custom-wrapper {
     max-width: 460px;
@@ -204,7 +215,7 @@
     --ag-header-column-separator-color: darkgrey;
 
 
- 
+
 }
 
 .ag-theme-alpine {
@@ -214,10 +225,10 @@
     --ag-row-border-style: line;
     --ag-row-border-width: 2px;
     --ag-row-border-color: rgb(150, 150, 200);
-   
-    
 
-    
+
+
+
 }
 
 ::ng-deep.ag-header-cell {
@@ -240,13 +251,15 @@
 
     margin-top: 10px;
     cursor: pointer;
- 
+
 }
-.colStyleSearch{
+
+.colStyleSearch {
     margin-top: 10px;
     cursor: pointer;
 }
-.colStyleIcon{
+
+.colStyleIcon {
     margin-top: 10px;
     cursor: pointer;
     width: 255px;
@@ -255,7 +268,7 @@
 }
 
 .colStylee {
- 
+
     margin-top: 10px;
     cursor: pointer;
     position: relative;
@@ -304,21 +317,22 @@
 .sidenavStyle {
     padding-top: 2%;
     padding-left: 6%;
-    
+
 
 }
 
-   .app-dashboarscreen{
+.app-dashboarscreen {
     position: relative;
-        bottom: 70px;
-    }
-    .ag-theme-alpine {
-        --ag-header-column-separator-display: block;
-        --ag-header-column-separator-height: 30%;
-        --ag-header-column-separator-width: 2px;
-        --ag-header-column-separator-color: rgba(0, 0, 0, 0.34);
+    bottom: 70px;
+}
 
-    }
+.ag-theme-alpine {
+    --ag-header-column-separator-display: block;
+    --ag-header-column-separator-height: 30%;
+    --ag-header-column-separator-width: 2px;
+    --ag-header-column-separator-color: rgba(0, 0, 0, 0.34);
+
+}
 
 .class {
     position: absolute;
@@ -332,33 +346,39 @@
     font-size: inherit;
     font-family: inherit;
 }
-.overlayDiv{
+
+.overlayDiv {
     position: relative;
-      height: 126px;
-             width: 477px;
-                 border: 1px solid;
-                           background: white;
-                           padding-right: 16px;
+    height: 126px;
+    width: 477px;
+    border: 1px solid;
+    background: white;
+    padding-right: 16px;
 }
-.overlayCol1{
+
+.overlayCol1 {
     position: relative;
-                            top: 26px;
-                            left: 10px;
+    top: 26px;
+    left: 10px;
 }
-.overlayCol2{
+
+.overlayCol2 {
     position: relative;
-                            top: 26px;
+    top: 26px;
 }
-.viewEn{
+
+.viewEn {
     cursor: pointer;
     position: relative;
     right: 30px;
 }
-.viewEn1{
+
+.viewEn1 {
     cursor: pointer;
     position: relative;
     right: 2px;
 }
+
 ::ng-deep .mat-mdc-tab-group {
     display: flex;
     flex-direction: column;
@@ -366,7 +386,7 @@
     height: 4%;
 }
 
-.footer{
+.footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -375,23 +395,25 @@
 }
 
 @supports (-moz-appearance:none) {
-    .addImgIcon{
+    .addImgIcon {
         position: absolute;
         right: 83%;
         top: 1%;
         cursor: pointer;
-      }
-      .colStyleIcon {
+    }
+
+    .colStyleIcon {
         margin-top: 14px;
         cursor: pointer;
         position: relative;
         left: 1%;
-      }
-   .colStyle{
-  margin-top: 10px;
-  cursor: pointer;
-  margin-left: 0px;
-}
+    }
+
+    .colStyle {
+        margin-top: 10px;
+        cursor: pointer;
+        margin-left: 0px;
+    }
 }
 
 
@@ -403,30 +425,34 @@
     width: var(--ag-header-column-resize-handle-width);
     height: var(--ag-header-column-resize-handle-height);
     top: calc(50% - var(--ag-header-column-resize-handle-height) * 0.5);
-    background-color:rgba(27, 27, 27, 0.051);
+    background-color: rgba(27, 27, 27, 0.051);
 }
 
 
- .main{
+.main {
     display: grid;
- }
+}
 
- .side{
+.side {
     position: relative;
     left: -25px;
- }
- .entityScreen{
+}
+
+.entityScreen {
     overflow: hidden;
- }
-.dashboardS{
+}
+
+.dashboardS {
     position: relative;
     bottom: 136%;
     width: 86%;
 }
-.entityL{
+
+.entityL {
     margin-top: -20px;
 }
-.unitLabel{
+
+.unitLabel {
     font-size: 12px;
 }
 
@@ -439,22 +465,25 @@
     --ag-grid-size: 3.6px;
     --ag-list-item-height: 20px !important;
 }
+
 /* @media screen and (min-resolution: 125dpi) {
     .gridRow{
         overflow-y: scroll;
     }
  } */
 
- @media screen and (min-width: 1024px) {
-    .entityScreen{
-        height: 745px;
+@media screen and (min-width: 1024px) {
+    .entityScreen {
+        height: 668px;
+        background: #FFFFFF;
     }
- }
+}
 
 
-.search1{
+.search1 {
     margin-left: 4%;
 }
-.search2{
+
+.search2 {
     margin-left: 12.5%;
 }

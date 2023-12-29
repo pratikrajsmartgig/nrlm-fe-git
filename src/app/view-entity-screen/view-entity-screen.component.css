@@ -13,7 +13,7 @@
 }
 .addEnView{
     margin-top: -19px;
-    height: 565px;
+    /* height: 565px; */
 }
 .entityLabel {
     background: #E1F6E8;
@@ -124,7 +124,7 @@
 }
 
 ::ng-deep.addEntitytab .mat-mdc-tab-body-wrapper {
-    height: 524px;
+    height: 468px;
 
 }
 
@@ -137,7 +137,7 @@
 }
 
 ::ng-deep.addEntitytab .mat-mdc-tab-labels {
-    display: flex;
+    display: none;
     flex: 1 0 auto;
     width: 12%;
 }

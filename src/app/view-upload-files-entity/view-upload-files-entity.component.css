@@ -204,9 +204,9 @@
     margin-left: 138px;
 }
 .colStyleIconS {
-    /* margin-top: 10px; */
+    left: 25px;
+    position: relative;
     cursor: pointer;
-    /* margin-left: 138px; */
 }
 .colStylee {
     margin-left: -81px;
@@ -267,8 +267,8 @@
     bottom: 71px;
 }
 .viewUpEntity{
-    margin-top: -19px;
-    height: 642px !important;
+    margin-top: -25px;
+    height: 622px !important;
 }
 .viewUpEntity1{
     margin-top: -19px;
