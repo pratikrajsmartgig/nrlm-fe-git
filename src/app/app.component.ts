@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
 import { Router, NavigationEnd} from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { isDevMode } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -42,6 +43,9 @@ export class AppComponent {
      
       }
     });
+  }
+  ngOnInit(){
+    // console.log = function(){};
   }
   ngOnDestroy() {
     this.destroy$.next();

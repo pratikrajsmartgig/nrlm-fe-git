@@ -46,20 +46,31 @@ export class AddEntityComponent {
   dissbleBtn:boolean =  false;
   mode: any;
   HOCheck: boolean = false;
+  entityCellData: any;
   constructor(private entityService: AddEntityServiceService, private router: Router,public dialog: MatDialog, private activeRoute :ActivatedRoute) {
   }
   @ViewChild(NgSelectComponent)
   ngSelectComponent!: NgSelectComponent;
   ngOnInit() {
     this.entityData = localStorage.getItem("entityData");
+    this.entityCellData = localStorage.getItem("EntityCelldata");
     this.unitCode = localStorage.getItem("UnitCode");
     if(this.unitCode ==='HO'){
       this.HOCheck = true;
     }
-    this.Status = localStorage.getItem("Status")
+    this.Status = localStorage.getItem("Status");
     this.UnitCode = localStorage.getItem("UnitCode");
     this.Status = localStorage.getItem("Status");
     let AuthStatus =  localStorage.getItem("AuthStatus");
+    console.log(JSON.parse(this.entityCellData));
+    this.entityCellData = JSON.parse(this.entityCellData);
+    this.IFSC = this.entityCellData.ifsc;
+    this.parentUnit = this.editEntityData.Parent_Unit;
+    this.combinedArray = this.parentUnit;
+    this.unitName = this.entityCellData.Unit_Name;
+    this.state = this.editEntityData.State;
+    this.pincode = this.entityCellData.Pin_Code;
+    this.email = this.entityCellData.Email;
     this.getStatesData();
     if (this.entityData == "addData") {
       this.isAdd = true;
@@ -93,7 +104,7 @@ export class AddEntityComponent {
       this.getLevelsData();
     }
     this.activeRoute.queryParamMap.subscribe((data:any)=>{
-      this.mode = data.params.mode   
+      this.mode = data.params.mode; 
       console.log(this.mode);
       if (this.mode == 'Add') {
         this.UnitCode = ''

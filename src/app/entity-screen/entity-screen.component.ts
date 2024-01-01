@@ -598,6 +598,9 @@ console.log(this.roleCode);
       this.entityService.getGridDataFromUnits(this.ROunitCode)
       .subscribe((res:any)=>{
         console.log(res);
+        if(res.data== null){
+         this.bankData = null;
+        }
         if (res && Array.isArray(res.data)) {
           // this.selectedLevelData = res.data;
           this.bankAllData = res.data;
