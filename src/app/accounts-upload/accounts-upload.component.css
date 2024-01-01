@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 .accountScr {
-    margin-top: -18px;
+    margin-top: 20px;
 }
 
 .unitLabelss {
@@ -177,7 +177,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 15px !important;
     line-height: 34px;
     color: #000000;
     width: 200px;
@@ -478,7 +478,7 @@
 .gridStyleMain {
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid rgba(0, 0, 0, 0.2);
-    height: 499px;
+    height: 500px;
     border-radius: 3px;
     padding-left: 25px;
     margin-left: 14px;
@@ -530,7 +530,7 @@
 
 
     .entityLabel {
-        font-size: 20px !important;
+        /* font-size: 20px !important; */
         left: 0px;
         position: relative;
     }
@@ -548,7 +548,7 @@
 
 @media screen and (min-width: 1024px) {
     .nrlmDataScreen{
-        height: 750px;
+        height: 680px;
     }
   }
 img{

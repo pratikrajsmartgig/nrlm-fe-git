@@ -21,8 +21,8 @@
     background-color: #fff;
 }
 .addRateS{
-    margin-top: -20px;
-    height: 89vh;
+    margin-top: 10px;
+    height: 70vh;
 }
 .backButton {
     /* position: absolute; */
@@ -94,7 +94,7 @@
 }
 
 ::ng-deep.addUsertab .mat-mdc-tab-labels {
-    display: flex;
+    display: none;
     flex: 1 0 auto;
     width: 12%;
 }

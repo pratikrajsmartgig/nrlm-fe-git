@@ -137,7 +137,7 @@
 }
 
 ::ng-deep.addUsertab .mat-mdc-tab-labels {
-    display: flex;
+    display: none;
     flex: 1 0 auto;
     width: 12%;
 }
@@ -162,7 +162,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     color: #464A53;

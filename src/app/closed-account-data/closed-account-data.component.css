@@ -67,7 +67,7 @@
     padding-left: 29px;
     /* margin-top: -13px; */
     position: relative;
-bottom: 10px;
+top: 10px;
 }
 ::ng-deep.ag-theme-alpine {
     --ag-grid-size: 3.6px;
@@ -154,12 +154,13 @@ bottom: 10px;
 }
 
 .entityLabel {
+    width: 200px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    /* line-height: 34px; */
-    color: #000000;      
+    font-size: 15px;
+    color: #000000;
+    margin-left: 25px;
 }
 
 .searchIcon {
@@ -234,6 +235,7 @@ bottom: 10px;
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -518,7 +520,7 @@ bottom: 10px;
   
 @media screen and (min-width: 1024px) {
     .nrlmDataScreen{
-        height: 680px;
+        height: 610px;
     }
   }
   

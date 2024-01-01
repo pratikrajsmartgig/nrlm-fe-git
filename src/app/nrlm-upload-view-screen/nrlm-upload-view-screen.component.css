@@ -165,7 +165,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
@@ -214,6 +214,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -412,9 +413,10 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 7px;
     color: black;
+    width: 200px;
 }
 .yearCol {
     margin-top: 19px;
@@ -443,10 +445,10 @@
 }
 
 .nrlmUploadView{
-    height: 735px;
+    height: 660px;
 }
 .nrlmUploadView1{
-    height: 680px;
+    height: 600px;
 }
 .backButton{
     background-color: #00A2FF;

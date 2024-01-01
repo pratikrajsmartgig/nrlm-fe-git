@@ -232,6 +232,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -534,7 +535,7 @@
   
 @media screen and (min-width: 1024px) {
     .nrlmDataScreen{
-        height: 750px;
+        height: 675px;
     }
   }
 

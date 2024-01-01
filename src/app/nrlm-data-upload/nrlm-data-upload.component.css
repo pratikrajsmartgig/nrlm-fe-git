@@ -24,7 +24,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     width: 100%;
-    margin-top: -13px;
+    margin-top: -5px;
 }
 
 .unitLabels {
@@ -118,7 +118,7 @@
 }
 @media screen and (min-width: 1024px) {
     .nrlmDataScreen{
-        height: 755px;
+        height: 690px;
     }
  }
 .gridStyle {
@@ -183,7 +183,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
@@ -226,6 +226,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */

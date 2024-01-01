@@ -75,7 +75,7 @@
 .btn {
     width: 125px !important;
     margin-top: 12px;
-    margin-left: 50px;
+    margin-left: 18px;
 }
 
 .modal-footer a {
@@ -89,7 +89,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 15px;
     color: #F2B585;
 }
 
@@ -170,7 +170,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 15px;
     line-height: 34px;
     margin-left: 143px;
     color: #000000;
@@ -199,7 +199,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
@@ -248,6 +248,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -495,13 +496,14 @@
 ::ng-deep.mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
 .mat-mdc-tab-link[_ngcontent-qpd-c71]:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label[_ngcontent-qpd-c71] {
     color: black;
+    font-size: 15px !important;
 }
 
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 15px;
     color: black;
 }
 
@@ -640,7 +642,7 @@
 }
 
 .viewClaims{
-    height: 710px;
+    height: 625px;
 }
 
 .backButton {

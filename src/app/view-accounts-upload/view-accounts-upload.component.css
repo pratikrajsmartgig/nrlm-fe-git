@@ -181,7 +181,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px !important;
     line-height: 34px;
     margin-left: 125px;
     color: #000000;
@@ -210,7 +210,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
@@ -259,6 +259,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -500,7 +501,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 15px;
     color: black;
 }
 
@@ -639,5 +640,5 @@
 }
 
 .viewAccounts{
-    height: 735px;
+    height: 660px;
 }

@@ -213,6 +213,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -505,7 +506,7 @@ width: 100%;
     color: black;
 }
 .nrlmUploadS{
-    margin-top: -36px;
+    margin-top: 18px;
 }
 .fBankCol{
     position: relative;
@@ -552,7 +553,7 @@ position: relative;
    
     
     .entityLabel {
-        font-size: 20px !important;
+        font-size: 15px !important;
         left: 10%;
         position: relative;
     }
@@ -569,7 +570,7 @@ position: relative;
   
   @media screen and (min-width: 1024px) {
     .nrlmDataScreen{
-        height: 765px;
+        height: 686px;
     }
   }
 

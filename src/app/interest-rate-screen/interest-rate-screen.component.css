@@ -139,7 +139,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 15px;
     line-height: 34px;
     margin-left: 125px;
     color: #000000;
@@ -221,6 +221,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -427,7 +428,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
-    padding-left: 81px;
+    padding-left: 55px;
     margin-top: 7px;
     color: black;
 }
@@ -539,7 +540,7 @@ width: 99%;
 
 @media screen and (min-width: 1024px) {
     .intrest-Rate{
-        height: 800px;
+        height: 720px;
     }
   }
 

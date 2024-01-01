@@ -206,7 +206,7 @@
 }
 
 ::ng-deep.addEntitytab .mat-mdc-tab-labels {
-    display: flex;
+    display: none;
     flex: 1 0 auto;
     width: 12%;
 }
@@ -454,7 +454,7 @@
     }
     
     ::ng-deep.addUsertab .mat-mdc-tab-labels {
-        display: flex;
+        display: none;
         flex: 1 0 auto;
         width: 12%;
     }
@@ -468,7 +468,7 @@
     }
     
     ::ng-deep.addEntitytab .mat-mdc-tab-labels {
-        display: flex;
+        display: none;
         flex: 1 0 auto;
         width: 12%;
     }
@@ -708,7 +708,7 @@
     }
   
 .viewScreen{
-    height: 696px;
+    height: 578px;
     overflow: hidden;
 }
 

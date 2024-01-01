@@ -50,6 +50,8 @@
     /* height: 1152px; */
     padding-left: 39px;
     /* margin-top: -17px; */
+    position: relative;
+    top: 10px;
 }
 
 ::ng-deep.mat-mdc-tab-labels {
@@ -166,7 +168,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.78) !important;
 }
@@ -215,6 +217,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -478,7 +481,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     /* padding-left: 21px; */
     margin-top: 7px;
     color: black;
@@ -488,7 +491,7 @@
     /* margin-left: -27px; */
 }
 .viewBox{
-    width: 114px;
+    width: 90px;
 }
 .viewBoxx{
     width: 202px;
@@ -505,9 +508,9 @@
 /* .sRow{
     margin-left: 74px;
 } */
-.viewNrlm{
-    margin-top: -20px;
-}
+/* .viewNrlm{
+    margin-top: 20px;
+} */
 
 @media screen and (min-resolution: 125dpi) {
     /* .gridRow{
@@ -519,6 +522,6 @@
    
 @media screen and (min-width: 1024px) {
     .viewNrlmUpload{
-        height: 710px;
+        height: 630px;
     }
   }
