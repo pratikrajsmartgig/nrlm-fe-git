@@ -188,7 +188,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     color: #464A53;
@@ -722,6 +722,7 @@ width: 12%;
 
   .table, th, td {
     border: 1px solid black;
+    font-size: 12px;
   }
 
 .footer1 {
