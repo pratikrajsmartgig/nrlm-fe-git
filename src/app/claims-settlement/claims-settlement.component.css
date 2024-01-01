@@ -207,7 +207,7 @@
 }
 
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
@@ -257,7 +257,7 @@
     position: relative;
     width: 69%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 ::ng-deep.multiselect-dropdown .dropdown-btn {
@@ -266,7 +266,7 @@
 }
 
 .entityLabel {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -391,7 +391,7 @@
 }
 
 .searchbarInput {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -454,7 +454,7 @@
     position: relative;
     width: 41%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 .overlayDiv {
@@ -826,7 +826,7 @@ margin-top: 1%;
     position: relative;
     width: 106%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 ::ng-deep.claimsSettle .modal-content{
     height: 298px;
@@ -865,7 +865,7 @@ margin-top: 1%;
 
     ng-multiselect-dropdown {
         font-size: 13px;
-        font-family: inherit;
+        font-family: 'Roboto';
     }
 }
 
@@ -944,9 +944,9 @@ margin-top: 1%;
     padding-left: 3px;
 }
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family: 'Roboto';font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family: 'Roboto';font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
@@ -963,7 +963,7 @@ margin-top: 1%;
   
   /* Use the font-family as you normally would */
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
   }
   .modal.show .modal-dialog {
     transform: none;

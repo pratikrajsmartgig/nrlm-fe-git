@@ -14,9 +14,9 @@
     /* overflow-y: scroll; */
 }
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family: 'Roboto';font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family: 'Roboto';font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
@@ -712,7 +712,7 @@ width: 12%;
     position: relative !important;
 }
 .btnAlign2{
-    left: 16% !important;
+    left: 12% !important;
     position: relative !important;
 }
 
@@ -748,4 +748,22 @@ width: 12%;
        margin-left: 4%;
        width: 80vw !important
     }
+}
+
+.save2{
+    position: relative; 
+    right: 5%
+}
+.save1{
+    position: relative; 
+    right: 1%
+}
+
+.submit2{
+    position: relative;
+     right: 1%;
+}
+.submit1{
+    position: relative;
+     left: 3%;
 }

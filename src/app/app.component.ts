@@ -19,7 +19,7 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'NRML-Project';
+  title = 'NRLM-Project';
   previousURL:any;
   currentURL = '';
   private destroy$ = new Subject<void>();

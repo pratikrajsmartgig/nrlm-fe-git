@@ -261,17 +261,17 @@
           class="btn btn-primary deleteButton">Delete</button>
       </div>
 
-      <div class="col-1 mt-2" style="position: relative; right: 1%;"
+      <div class="col-1 mt-2" [ngClass]="deletePermission && !ComeFromView && showRejectOnly === true ? 'save1': 'save2'"
         *ngIf="((authorizationClaim!==true) && ((claimsCellData?.status==='U'|| claimsCellData?.status==='R') && claimsCellData?.pending === 1)) || (authorizationClaim!==true && ((claimsCellData?.status==='R'|| claimsCellData?.status==='U')))">
         <button type="button" [disabled]="disableSaveSubmit" (click)="SaveEditData()"
           class="btn btn-primary SaveButton">Save</button>
       </div>
-      <div class="col-1 mt-2" style="position: relative; left: 3%;"
+      <div class="col-1 mt-2" [ngClass]="deletePermission && !ComeFromView && showRejectOnly === true ? 'submit1': 'submit2'"
         *ngIf="((authorizationClaim!==true) && ((claimsCellData?.status==='U'|| claimsCellData?.status==='R') && claimsCellData?.pending === 1)) || (authorizationClaim!==true && ((claimsCellData?.status==='R'|| claimsCellData?.status==='U')))">
         <button [disabled]="disableSaveSubmit" type="button" (click)="SubmitEditData()"
           class="btn btn-primary SaveButton">Submit</button>
       </div>
-      <div class="col-1 mt-2" style="position: relative; left: 5%;"
+      <div class="col-1 mt-2" style="position: relative; left: 3%;"
         *ngIf="((authorizationClaim!==true) && showRejectOnly === false && ((claimsCellData?.status==='U'|| claimsCellData?.status==='R') && claimsCellData?.pending === 1)) ||  showRejectOnly === false && (authorizationClaim!==true && ((claimsCellData?.status==='R'|| claimsCellData?.status==='U')))">
         <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
           class="btn btn-primary deleteButton">Reject</button>
@@ -301,11 +301,11 @@
       <div class="col-2 btnwidth" *ngIf="!viewClaim || authorizationClaim" [ngClass]="{'btnAlign1' :!viewClaim || authorizationClaim , 'btnAlign2':viewClaim && authorizationClaim && claimsCellData?.status==='P'}">
         <button type="button" (click)="back()" class="btn btn-primary backButton">Back</button>
       </div>
-      <div class="col-2 btnwidth" *ngIf="viewClaim && authorizationClaim && claimsCellData?.status==='P'" style="left: 15%;position: relative;">
+      <div class="col-2 btnwidth" *ngIf="viewClaim && authorizationClaim && claimsCellData?.status==='P'" style="left: 10%;position: relative;">
         <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
           class="btn btn-primary resetButton">Authorise</button>
       </div>
-      <div class="col-2 btnwidth" *ngIf="viewClaim && authorizationClaim && claimsCellData?.status==='P'" style="left: 14%;position: relative;">
+      <div class="col-2 btnwidth" *ngIf="viewClaim && authorizationClaim && claimsCellData?.status==='P'" style="left: 8%;position: relative;">
         <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
           class="btn btn-primary deleteButton">Reject</button>
       </div>

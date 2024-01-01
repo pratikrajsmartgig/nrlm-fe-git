@@ -19,11 +19,11 @@
 .unitLabelss {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
     font-size: 12px;
     padding-left: 11px;
     margin-top: 7px;
     color: black;
+    font-weight: bold;
 }
 
 .fyColNrlm {
@@ -62,21 +62,21 @@
 .unitLabel {
        font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
     font-size: 12px;
     padding-left: 62px;
     margin-top: 15px;
     color: black;
+    font-weight: bold;
 }
 
 .unitLabelF {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
     font-size: 12px;
     padding-left: 88px;
     margin-top: 15px;
     color: black;
+    font-weight: bold;
 }
 
 .drpBank {
@@ -108,9 +108,8 @@
 }
 
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
     font-size: 12px;
     color: #F2B585;
 }
@@ -166,7 +165,7 @@
     position: relative;
     width: 110% !important;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 ::ng-deep.multiselect-dropdown .dropdown-btn {
@@ -175,12 +174,13 @@
 }
 
 .entityLabel {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 34px;
     color: #000000;
+    width: 200px;
 }
 
 .searchIcon {
@@ -256,6 +256,7 @@
 
 ::ng-deep.ag-ltr .ag-cell {
     cursor: pointer;
+    font-size: 12px;
 }
 
 /*  */
@@ -310,7 +311,7 @@
 }
 
 .searchbarInput {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -382,7 +383,7 @@
     position: relative;
     width: 41%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 .overlayDiv {
@@ -529,8 +530,8 @@
 
 
     .entityLabel {
-        font-size: 15px !important;
-        left: 45px;
+        font-size: 20px !important;
+        left: 0px;
         position: relative;
     }
 
@@ -541,7 +542,7 @@
 
     ng-multiselect-dropdown {
         font-size: 12px;
-        font-family: inherit;
+        font-family: 'Roboto';
     }
 }
 

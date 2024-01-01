@@ -31,7 +31,7 @@
                     <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 drpBank" style="font-size: 12px;">
                         <ng-select [clearable]="false" [(ngModel)]="bankHOCode" class="startDropdown" id="Bank"
                             name="unitName"  placeholder="Select Bank" (ngModelChange)="getHOStatus($event)" required>
-                            <ng-option  [value]="bankHOCode">{{ bankHOCode }}</ng-option>
+                            <ng-option  [value]="bankHOCode" *ngFor="let item of hoData">{{ bankHOCode }}</ng-option>
                         </ng-select>
                     </div>
                 </div>
@@ -90,10 +90,10 @@
                     <label class="unitLabel"><strong>Regional Office</strong></label>
                 </div>
                 <div class="col-xxl-7 col-xl-6 col-lg-3 col-md-3 startyDrp" style="width: 250px; margin-top: 2px;" >
-                    <ng-select [clearable]="false"  placeholder="select RO"  [(ngModel)]="bankRCode"
-                        (ngModelChange)="getROStatus($event)" id="startYear" class="startDropdown">
-                        <ng-option [value]="bankRCode">{{ bankRCode }}</ng-option>
-                    </ng-select>
+                    <ng-select [clearable]="false" placeholder="select RO" [(ngModel)]="bankRCode"
+                    (ngModelChange)="getROStatus($event)" id="startYear" class="startDropdown">
+                    <ng-option *ngFor="let option of roData" [value]="option">{{ option }}</ng-option>
+                  </ng-select> 
                 </div>
             </div>
 
@@ -142,7 +142,7 @@
                         <div class="col-xxl-6 col-xl-5 col-lg-3 col-md-3 startyDrp" style="width: 250px;" > 
                             <ng-select [clearable]="false" placeholder="select bank" [(ngModel)]="bankSCode"
                                 (ngModelChange)="getBankStatus($event)" id="endYear" class="startDropdown">
-                                <ng-option  [value]="bankSCode">{{ bankSCode }}</ng-option>
+                                <ng-option  [value]="bank" *ngFor="let bank of bankData">{{ bank }}</ng-option>
                             </ng-select>
                        </div>
                     </div>

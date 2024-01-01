@@ -71,7 +71,7 @@
 
  h1{
   color: rgb(218, 20, 20);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto';
   margin-left: 160px;
 }
 .dialog-content {
@@ -96,7 +96,7 @@
 
 .dialog-content-success h1{
     color: #049c25;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
     margin-left: 160px;
 }
 
@@ -144,5 +144,5 @@
     margin-left: 60px;
     margin-right: 50px;
     margin-top: 15px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-  }
+    font-family: 'Roboto';
+}

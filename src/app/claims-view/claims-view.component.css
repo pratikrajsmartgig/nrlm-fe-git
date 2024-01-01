@@ -86,7 +86,7 @@
 
 
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
@@ -158,7 +158,7 @@
     position: relative;
     width: 69%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 ::ng-deep.multiselect-dropdown .dropdown-btn {
@@ -167,7 +167,7 @@
 }
 
 .entityLabel {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
     font-size: 23px;
@@ -184,7 +184,7 @@
 }
 
 .ag-header-cell-text {
-    font-family: 'Sans Serif Collection';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -196,7 +196,7 @@
 
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'Sans Serif Collection';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -291,7 +291,7 @@
 }
 
 .searchbarInput {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -352,7 +352,7 @@
     position: relative;
     width: 41%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 .overlayDiv {
@@ -498,7 +498,7 @@
 }
 
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 17px;

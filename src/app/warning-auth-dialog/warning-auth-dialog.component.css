@@ -16,7 +16,7 @@
 
  h1{
   color: rgb(10, 200, 121);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto';
   margin-left: 130px;
 }
 .dialog-content {
@@ -37,7 +37,7 @@
 
 .dialog-content-reject h1{
   color: red;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto';
   margin-left: 130px;
 }
 .button-container {
@@ -87,11 +87,11 @@
   }
 
   .warningMsg{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Roboto';
   }
 
   .successMsg{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Roboto';
     text-align: center;
   }
 

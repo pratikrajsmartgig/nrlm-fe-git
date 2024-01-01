@@ -80,7 +80,7 @@ bottom: 10px;
 }
 
 ::ng-deep.mat-mdc-tab .mdc-tab__text-label {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -145,7 +145,7 @@ bottom: 10px;
     position: relative;
     width: 110% !important;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 ::ng-deep.multiselect-dropdown .dropdown-btn {
@@ -154,7 +154,7 @@ bottom: 10px;
 }
 
 .entityLabel {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -287,7 +287,7 @@ bottom: 10px;
 }
 
 .searchbarInput {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -347,7 +347,7 @@ bottom: 10px;
     position: relative;
     width: 41%;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Roboto';
 }
 
 .overlayDiv {
@@ -511,7 +511,7 @@ bottom: 10px;
     } */
     ng-multiselect-dropdown {
         font-size: 13px;
-        font-family: inherit;
+        font-family: 'Roboto';
     }
   }
 

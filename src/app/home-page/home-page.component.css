@@ -132,7 +132,7 @@
     margin-top: 14px;
     width: 94px;
     height: 30px;
-    font-family: 'Alegreya Sans';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -147,7 +147,7 @@
         /* margin-top: 14px; */
         width: 99px;
         height: 36px;
-        font-family: 'Alegreya Sans';
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: bold;
         font-size: 15px;
@@ -204,7 +204,7 @@
     text-align: center;
     margin-top: -5px;
     height: 30px;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 23px;
@@ -216,7 +216,7 @@
     color: #000000;
     text-align: center;
     margin-top: -18px;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 23px;
@@ -254,7 +254,7 @@
   }
 .btnStyle {
     color: #EC8737;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 23px;

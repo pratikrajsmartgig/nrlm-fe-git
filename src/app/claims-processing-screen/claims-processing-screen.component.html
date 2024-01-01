@@ -155,7 +155,7 @@
             
                 </div>
              
-                <div class="col-2 ms-2" *ngIf="(EditPermission && showhided && (loginUserId === makerId || newMaker === 'null')  && celldata?.status==='U') || (EditPermission && showhided && loginUserId === makerId && (celldata?.status==='R' && celldata?.pending === celldata?.rolePos) )" >
+                <div class="col-2 ms-2" *ngIf="(EditPermission && showhided && (loginUserId === makerId || newMaker === 'null')  && celldata?.status==='U') || (EditPermission && showhided && loginUserId === makerId && (celldata?.status==='R' && celldata?.pending === celldata?.rolePos) )" style="margin-top: 10px;" >
                     <img src="../../assets/image/edit.svg" (click)="EditEntity()" title="Edit">
             
                 </div>
@@ -163,7 +163,7 @@
                     <img src="../../assets/image/edit.svg"  title="Edit" (click)="EditEntityDialog()" class="editImg2">
                 </div>
             
-                <div  class="col-2" *ngIf="authorizePermission && showhided  && loginUserId !== makerId && celldata?.status ==='P'" style="right: 10px;top: 10px;position: relative;">
+                <div  class="col-2" *ngIf="authorizePermission && showhided  && loginUserId !== makerId && celldata?.status ==='P'" style="top: 10px;position: relative;">
                     <img src="../../assets/image/Authorize-button.svg" (click)="AuthorizeEntity()" title="Authorize">
             
                 </div>

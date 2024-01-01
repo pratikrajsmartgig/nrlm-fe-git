@@ -14,12 +14,6 @@
 body{
   overflow-x: hidden;
 }
-::ng-deep *{
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-}
 
 ::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface {
   display: block;
@@ -146,7 +140,7 @@ body{
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Roboto'; }
 
 
 ::-webkit-scrollbar {
