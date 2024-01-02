@@ -331,10 +331,11 @@ body {
 }
 
 .errMSggg {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
     color: red;
     position: absolute;
-    /* top: 49px; */
-    margin-top: 46px;
+    margin-top: 35px;
     width: 161px;
 }
 .errMSgggs {
@@ -348,8 +349,10 @@ body {
 .errParentU {
     color: red;
     position: absolute;
-    margin-top: -4px;
+    margin-top: -2px;
     width: 161px;
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
 }
 
 .rowDivsection {
@@ -364,6 +367,8 @@ body {
     color: red;
     position: absolute;
     width: 182px;
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
 }
 
 .unitnameInput {
@@ -551,11 +556,45 @@ body {
    }
 
 ::ng-deep.multiselect-dropdown .dropdown-btn .selected-item-container {
-    margin-top: -4px;
+    margin-top: -1px;
 }
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+input{
+    font-size: 12px !important;
+    font-family: 'Roboto';
+}
+
+
+::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+::ng-deep.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+  ::ng-deep.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important; 
+  }
+
+::ng-deep.dropdown-list li{
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+
+  ::ng-deep.multiselect-dropdown .dropdown-btn .selected-item-container .selected-item{
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+}
+
+::ng-deep.multiselect-dropdown .dropdown-btn{
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
 }

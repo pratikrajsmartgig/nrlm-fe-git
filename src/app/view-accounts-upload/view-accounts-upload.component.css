@@ -20,6 +20,8 @@
     height: 35px;
     top: 19px;
     width: 150px;
+    font-family: 'Roboto';
+    font-size: 12px;
 }
 
 .colF {
@@ -56,6 +58,8 @@
     width: 120px;
     height: 36px;
     margin-left: -35px;
+    font-family: 'Roboto';
+    font-size: 12px;
 }
 
 .container,

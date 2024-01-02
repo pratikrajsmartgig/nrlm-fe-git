@@ -143,8 +143,22 @@ h5 {
     border-width: 0.5px;
 }
 :host ::ng-deep.ng-dropdown-panel .scroll-host  {
-    max-height: 150px;
+    max-height: 138px;
 }
 .btnR{
     margin-top: 115px;
 }
+
+::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+::ng-deep.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+
+  ::ng-deep.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important; 
+  }

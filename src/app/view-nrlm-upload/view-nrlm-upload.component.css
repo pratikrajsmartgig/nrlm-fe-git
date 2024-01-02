@@ -471,7 +471,9 @@
 }
 .form-control{
     line-height: 1.5;
-    height: 32px
+    height: 32px;
+    font-family: 'Roboto';
+    font-size: 12px;
 }
 .fRow{
     margin-top: 7px;
@@ -524,4 +526,9 @@
     .viewNrlmUpload{
         height: 630px;
     }
+  }
+
+  input{
+    font-size: 12px !important;
+    font-family: 'Roboto';
   }

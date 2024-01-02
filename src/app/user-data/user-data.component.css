@@ -389,3 +389,13 @@ margin-left: 2px;
     position: relative;
     right: 28px;
 }
+
+::ng-deep.dropdown-list li{
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+
+  ::ng-deep.multiselect-dropdown .dropdown-btn .selected-item-container .selected-item{
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+}

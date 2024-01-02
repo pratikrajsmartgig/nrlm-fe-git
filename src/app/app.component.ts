@@ -45,7 +45,7 @@ export class AppComponent {
     });
   }
   ngOnInit(){
-    // console.log = function(){};
+    console.log = function(){};
   }
   ngOnDestroy() {
     this.destroy$.next();

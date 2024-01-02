@@ -330,24 +330,32 @@
         /* top: 49px; */
         margin-top: 34px;
         width: 161px;
+        font-size: 12px !important;
+        font-family: 'Roboto' !important;
       }
       .errMSgggs {
         color: red;
         position: absolute;
         /* top: 49px; */
-        margin-top: 46px;
+        margin-top: 35px;
         width: 190px;
+             font-size: 12px !important;
+        font-family: 'Roboto' !important;
       }
       .errMSgggss {
         color: red;
         position: absolute;
         /* top: 49px; */
-        margin-top: 46px;
+        margin-top: 35px;
         width: 375px;
+             font-size: 12px !important;
+        font-family: 'Roboto' !important;
       }
       .errParentU{
         color: red;
         position: absolute;
+             font-size: 12px !important;
+        font-family: 'Roboto' !important;
       
       }
   .rowDivsection{
@@ -359,6 +367,8 @@
 .errState{
     color: red;
     position: absolute;
+    font-size: 12px !important;
+    font-family: 'Roboto' !important;
 }
 .errorEntity{
     color: red;
@@ -463,3 +473,17 @@ input:disabled {
     bottom: 0;
     width: 100%;
 }
+
+::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+::ng-deep.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+  }
+
+  ::ng-deep.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+    font-family: 'Roboto' !important;
+    font-size: 12px !important; 
+  }

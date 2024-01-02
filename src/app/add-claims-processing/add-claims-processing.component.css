@@ -2,7 +2,27 @@
     position: relative;
     bottom: 71px;
 }
+::ng-deep.ag-header-cell-text {
 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.78) !important;
+}
+
+::ng-deep.ag-header {
+    background-color: rgba(43, 190, 95, 0.1);
+    ;
+}
+
+::ng-deep.ag-ltr .ag-cell {
+    cursor: pointer;
+    font-size: 12px;
+}
 .containerStyle {
     border: 1px solid #E6E6E6;
     border-radius: 10px;
@@ -425,6 +445,8 @@ body {
     height: 80px;
     background: #f9f7f7;
     margin-bottom: 10px;
+    font-size: 12px !important;
+    font-family: 'Roboto';
     /* overflow-x: scroll; */
 }
 
@@ -561,7 +583,7 @@ body {
 .data{
     width: 121%;
     position: relative;
-    right: 11rem;
+    right: 55px;
 }
 
 label{
@@ -768,3 +790,18 @@ width: 12%;
     position: relative;
      left: 3%;
 }
+
+input{
+    font-family: 'Roboto' !important;
+    font-size: 12px !important;
+}
+
+::ng-deep.modal-backdrop {
+    position: relative;
+  }
+
+  h2{
+    margin-top: 18px;
+    font-size: 15px !important;
+    font-family: 'Roboto' !important;
+  }
