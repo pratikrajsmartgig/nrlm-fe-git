@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserServiceService } from '../services/user-service.service';
@@ -58,7 +58,8 @@ export class AddUserDataComponent {
   roleValueSelectedObj:any=[];
   disableEdit:boolean=false
   authorziedUser:boolean = false;
-  constructor(private userService: UserServiceService, private fb: FormBuilder, private router: Router, public dialog: MatDialog,) {
+  userLevel:any;
+  constructor(private userService: UserServiceService, private fb: FormBuilder, private router: Router, public dialog: MatDialog,private cdr: ChangeDetectorRef) {
   }
   ngOnInit() {
     this.myForms = this.fb.group({
@@ -68,6 +69,10 @@ export class AddUserDataComponent {
     this.GetRolesData();
     // AuthorizedUser
     this.showUser = localStorage.getItem("UserData");
+    let tokendata:any = localStorage.getItem("TokenDetals");
+    tokendata = JSON.parse(tokendata);
+     this.userLevel = tokendata.level;
+    console.log(this.userLevel);
     console.log("UserData",this.showUser);
     this.UserId = localStorage.getItem("userID");
     this.Status = localStorage.getItem("Status");
@@ -262,17 +267,18 @@ console.log('inngon',this.roleValueSelectedObj)
     console.log("Event", event);
     // alert("hhhh")
     this.Level= event.level;
+    console.log(this.Level);
     this.parentUnit = '';
     this.unitCode = '';
     // let level = event.level;
     this.Level = this.Level;
-    if (this.Level === 1) {
+    if (this.Level === this.userLevel) {
       this.parentUnit = 0;
       console.log("Level", this.Level)
       console.log("ParentLevel", this.parentUnit)
       this.getUnitNameByLevel();
     }
-    if (this.Level !== 1) {
+    if (this.Level !== this.userLevel) {
       this.userService.getParentLevels(this.Level).subscribe((res: any) => {
         console.log("LevelsResponse", res)
         if (res) {
@@ -313,6 +319,14 @@ console.log('inngon',this.roleValueSelectedObj)
       console.log("RecordStatusesponse", res)
       if (res) {
         this.unitCodeData = res?.data;
+        //  let unitCode = res?.data[0].unitCode;
+        //  let unitname = res?.data[0].unitName;
+        // this.unitCodeData = unitCode+'-'+unitname;
+      if(this.unitCodeData){
+        this.unitCodeData = this.unitCodeData.map((item:any) => `${item.unitCode}-${item.unitName}`);
+      }
+      this.cdr.detectChanges();
+    
         console.log("unitCodeData", this.unitCodeData);
       }
     },
@@ -328,7 +342,7 @@ console.log('inngon',this.roleValueSelectedObj)
   }
   getUnitNameFromLevel(event: any) {
     console.log("UnitName", event)
-    this.unitCode = event.unitCode;
+    this.unitCode = event;
     console.log("unitName", this.unitCode);
   }
   getRecordStatusData() {
@@ -486,7 +500,7 @@ console.log('inngon',this.roleValueSelectedObj)
             (err: any) => {
              // console.log("ErrorMessage", err.error.message);
              localStorage.setItem("RateAllowedPopup",err.error.message);
-             localStorage.setItem("PopupMaitainance",'NrlmUpload');
+             localStorage.setItem("PopupMaitainaunitCodeDatance",'NrlmUpload');
              this.errordialog?.openDialog();
             }
           );

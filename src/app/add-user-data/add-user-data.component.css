@@ -299,7 +299,7 @@
 }
 
 ::ng-deep.levelDropdown2 .ng-dropdown-panel.ng-select-bottom {
-    width: 434px !important;
+    /* width: 434px !important; */
     line-height: 1.5;
 }
 

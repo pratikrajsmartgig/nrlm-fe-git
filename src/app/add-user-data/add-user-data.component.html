@@ -45,7 +45,7 @@
                             </span>
                         </p>
                     </div>
-                    <div class="col-md-3" *ngIf="this.Level !== 1">
+                    <div class="col-md-3" *ngIf="this.Level !== userLevel">
                         <label class="unitcodeLabel">Parent Unit *</label>
                         <ng-select [disabled]="authorziedUser" [clearable]="false" (change)="getParentLevel($event)" [items]="combinedArray"
                             class="levelDropdown" id="parentu" name="parentu" placeholder="Select Parent Unit"
@@ -57,7 +57,7 @@
                             </span>
                         </p>
                     </div>
-                    <div class="col-md-4" *ngIf="Level !== 1">
+                    <div class="col-md-4" *ngIf="Level !== userLevel">
                         <label class="unitcodeLabel"> Unit Name *</label>
                         <ng-select [disabled]="authorziedUser" [clearable]="false" class="levelDropdown2" id="unitn" name="unitn"
                             placeholder="Select Unit Name" (change)="getUnitName($event)" [items]="unitCodeData"
@@ -69,11 +69,11 @@
                             </span>
                         </p>
                     </div>
-                    <div class="col-4" *ngIf="Level === 1">
+                    <div class="col-4" *ngIf="Level === userLevel">
                         <label class="unitcodeLabel"> Unit Names *</label>
                         <ng-select  [disabled]="authorziedUser" [clearable]="false" class="levelDropdown2" id="unitn" name="unitn"
                             placeholder="Select Unit Name" (change)="getUnitNameFromLevel($event)" [items]="unitCodeData"
-                            bindLabel="unitName" bindValue="unitCode" [(ngModel)]="unitCode" required #unitn="ngModel">
+                            bindLabel="unitName" bindValue="unit" [(ngModel)]="unitCode" required #unitn="ngModel">
                         </ng-select>
                         <p class="validations" *ngIf="unitn.invalid && (unitn.dirty || unitn.touched)">
                             <span class="errParentU" *ngIf="unitn.errors?.['required']">
@@ -245,16 +245,16 @@
                     <div class="col-2" *ngIf="showUser == 'deleteData'">
                         <button type="button" (click)="deleteUser()" class="btn btn-primary deleteButtonn">Delete</button>
                     </div>
-                    <div class="col-2" *ngIf="showUser == 'AddUser'  && this.Level !== 1">
+                    <div class="col-2" *ngIf="showUser == 'AddUser'  && this.Level !== userLevel">
                         <button [disabled]="!recordStatus || !Grade || !designationName || !departmentName || !email || !numberEntered || !nameEntered || !userName || !roleSelect || !unitCode || !parentUnit || !Level || !userId ||!mobileN.valid ||!emailIn.valid" (click)="saveAddUserData()" type="button" class="btn btn-primary SaveButton">Save</button>
                     </div>
-                    <div class="col-2" *ngIf="showUser == 'AddUser' && this.Level === 1">
+                    <div class="col-2" *ngIf="showUser == 'AddUser' && this.Level === userLevel">
                         <button [disabled]="!recordStatus || !Grade || !designationName || !departmentName || !email || !numberEntered || !nameEntered || !userName || !roleSelect || !unitCode || !Level || !userId || !mobileN.valid ||!emailIn.valid" (click)="saveAddUserData()" type="button" class="btn btn-primary SaveButton">Save</button>
                     </div>
-                    <div class="col-2" *ngIf="showUser == 'EditUser' && this.Level !== 1">
+                    <div class="col-2" *ngIf="showUser == 'EditUser' && this.Level !== userLevel">
                         <button [disabled]="!recordStatus && !Grade && !designationName && !departmentName && !email && !numberEntered && !nameEntered && !userName && roleSelect.length>0 && !unitCode && !parentUnit && !Level && !userId ||!mobileN.valid ||!emailIn.valid" (click)="saveEditUserData()" type="button" class="btn btn-primary SaveButton">Save</button>
                     </div>
-                    <div class="col-2" *ngIf="showUser == 'EditUser' && this.Level === 1">
+                    <div class="col-2" *ngIf="showUser == 'EditUser' && this.Level === userLevel">
                         <button [disabled]="!recordStatus || !Grade || !designationName || !departmentName || !email || !numberEntered || !nameEntered || !userName || !unitCode || !Level || !userId  || !(roleSelect.length>0 == true) ||!mobileN.valid ||!emailIn.valid" (click)="saveEditUserData()" type="button" class="btn btn-primary SaveButton">Save</button>
                     </div>
                     <div class="col-2" *ngIf="showUser == 'AuthorizedUser'">
